@@ -11,6 +11,7 @@
 <body>
     <div class="container">
         <aside>
+            <div class="con">
             <div class="brand">
                     <h1><a href="">Simulasi Garjas</a></h1>
                     <span>www.sisgarjas.com</span>
@@ -18,16 +19,33 @@
             </div>
 
             <ul>
-                <li><a href="">Simulasi</a></li>
-                <li><a href="">Tentang</a></li>
-                <li><a href="">Hubungi Kami</a></li>
+                
+                <li><a href=""><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAH1JREFUSEvtlUsOgCAMRIeTqTfXk2lMxIUGfJnYbpRtB4bXDxQFrxJ8vtINZklDg2qPTUeM6m4E60PKKjHV/QbNhJ7Nc+0imluqs2vQ66JF0ljZXAI8n+kGFN0eNIpuFzncgKLbBHQj1dlz8GGDN+ag+1TQNsW69D8Z34wKN2WtKBmr5BH3AAAAAElFTkSuQmCC"/>Simulasi</a></li>
+                <li><a href=""><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAQdJREFUSEvNlNENwjAMBa+TwAbARrABG8AmwAaMwAiwAUwCMopRsOLaKq1Ev5K4eRdbz+6Y+Osm1uevAGtgVzLeA6dM9pkMVHhuBO9ACIoAV2BRhB9FULYiPCvn8s/KyyYCPMtFKYdkop+sD9Xe1ckCROsCnIEtYMs1CqCugpZLsxgVsAGOhaYlHASwddYMVKyOy7pp2xbZs6UCJAPph5RtLSBjSwWlbGsBWVumbesBIltG8Y9uH6DPlrZxXdtmAC1b1oBe22YALVvWgFbcLVHtosiWXvwGLG3T1C+SPqinZWRLG9cuf5/3DTsF6Xj+ulimqzzEi4cA65RB+2hcDxJtOeBnIU/gBcXURhm8ZiFoAAAAAElFTkSuQmCC"/>Tentang</a></li>
+                <li><a href=""><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAY5JREFUSEvVle0xQ1EQht9UgApIBagAFZAKUAEqQAWogFSAClABOlCCDpgns3tnrbM3cmfyw85kksnds89+vHvuSEu20ZLjayjgS9KbfR4kPVaJVoBrSeuSjiV9Ng4DiAYMX75/WAasSrqXtGtez5L2iuy2zO/UkiGRM0l30T8DyGAzBeQA2fUZFZ9YtSTUVZIBuXQPmiFk+yqJCi/NySEE3/aDfwXgT/kEwWIiMeCHtWsiieH/UhEZ7RS9QCkH4Rm/L6ylDmceV5Kmko5aAFpx2AC820CzooAgihd7zuBpXVdVbpEfiIwquPvQLsBrqX2z2C2Z0seVQBhL4r9B1lq03CZUQq8HWQuwYT30Kigf2eUqWMpbk+pNRa+uCjI+D4cYGtJzCMGfJDFUrFzGvssOHe8HCJWwB0gQ5Xhwd2lC+gBkyV7kq6NvFvhTaSfnedc1ECqplq8F65asJdMqO2bClkb5Vr4MHN+ZzasgBkFdgFjGCuQb3Z1bBOCHaBsQ3hlAvX3NjR8CWGjh/j/gG+gKUhl2keNfAAAAAElFTkSuQmCC"/>Hubungi Kami</a></li>
             </ul>
+        </div>
+        <div class="button-menu">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAF9JREFUSEvtk8sJACAMQ9PR3NzN9CxIS7BBKnqO5vPQID4mfh/fIFz4ykQjjOULltC7BnKDwwLr9SsM5A1YBu4KGZBpA/lE9Q08yA1AZyqykFMMmICh9s2fHNZmBPUnmrebCBlsxQ0oAAAAAElFTkSuQmCC" height="50" width="50"/>
+        <div>
         </aside>
-        <main>
-             
-        </main>
-        <footer></footer>
+       
 
     </div>
+
+    <script>
+        // script burger menu
+        const navSlide=()=>{
+            const burger= document.querySelector('.button-menu');
+            const nav=document.querySelector('.con');
+
+
+            burger.addEventListener('click',()=>{
+                nav.classList.toggle('nav-active');
+            });
+        }
+            navSlide();
+        // end of burger menu
+    </script>
 </body>
 </html>
