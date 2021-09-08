@@ -82,7 +82,7 @@ li {
 
 /* main area */
 main {
-  display: grid;
+  /* display: grid; */
   grid-template-columns: repeat(auto-fit, minmax(1px, 1fr));
   /* row-gap: 1; */
 
@@ -92,15 +92,17 @@ main {
   display: grid;
   grid-template-areas:
   "header ."
-  "kategori garjasb "
+  "kategori garjasb"
   "garjasa garjasc"
   "bmi bmi";
   gap: 1rem;
+  justify-content: start;
+  /* align-content: center; */
 }
 .header {
   color: #25396f;
   margin-top: 2rem;
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
   grid-area: header;
 }
 .header span {
@@ -108,9 +110,9 @@ main {
 }
 
 .card-gender {
-  /* display:grid; */
+  /* display:flex; */
   background-color: white;
-  max-width: 100%;
+  max-width: 80%;
   padding: 2rem;
   border-radius: 30px;
   line-height: 2;
@@ -121,9 +123,9 @@ main {
 }
 
 .card-nilai {
-  /* display: grid; */
+  /* display: flex; */
   background-color: white;
-  max-width: 100%;
+  max-width: 80%;
   padding: 2rem;
   border-radius: 30px;
   line-height: 2;
@@ -175,9 +177,25 @@ main {
     }
   .cons{
     position: absolute;
-      transform: translateY(-100vh);
-      z-index: -4;
     
+      transform: translate(5vh,-100vh);
+      /* transform: translateX(); */
+
+      z-index: -4;
+      display: grid;
+      grid-template-areas:
+      "header"
+      "kategori" 
+      "garjasa" 
+      "garjasb "
+      "garjasc"
+      "bmi";
+      gap: 1rem;
+      justify-content: center;
+      align-content: center;
+
+      align-items: center;
+      justify-items:center ;
   }
   /* main {
     margin-top: 2rem;
