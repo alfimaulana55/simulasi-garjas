@@ -9,7 +9,7 @@
       .hasil {
         border: 2px solid black;
         height: 200px;
-        width: 200px;
+        width: 500px;
       }
       #umur {
         margin-left: 11em;
@@ -27,6 +27,13 @@
         margin-left: 1em;
         margin-bottom: 1em;
       }
+      #pull-up {
+        margin-left: 6.5em;
+      }
+      #sit-up {
+        margin-top: 1em;
+        margin-left: 6.8em;
+      }
       button {
         margin: 1em auto;
         margin-left: 19em;
@@ -43,6 +50,10 @@
     <label for="lari">Jarak Lari 12 Menit (dalam meter) : </label>
 
     <input type="text" id="lari" size="5" />
+
+    <br /><label for="pull-up">Pull Up (dalam 1 menit):</label><input type="text" id="pull-up" size="5" />
+
+    <br /><label for="sit-up">Sit Up (dalam 1 menit) :</label><input type="text" id="sit-up" size="5" />
 
     <br /><button id="submit">submit</button>
     <br />
@@ -71,11 +82,46 @@
         } else if (umur <= 30) {
           resultUmur = 2;
           console.log(resultUmur);
+        } else if (umur <= 35) {
+          resultUmur = 3;
+          console.log(resultUmur);
+        } else if (umur <= 35) {
+          resultUmur = 3;
+          console.log(resultUmur);
+        } else if (umur <= 40) {
+          resultUmur = 4;
+          console.log(resultUmur);
+        } else if (umur <= 43) {
+          resultUmur = 5;
+          console.log(resultUmur);
+        } else if (umur <= 46) {
+          resultUmur = 6;
+          console.log(resultUmur);
+        } else if (umur <= 49) {
+          resultUmur = 7;
+          console.log(resultUmur);
+        } else if (umur <= 52) {
+          resultUmur = 8;
+          console.log(resultUmur);
+        } else if (umur <= 55) {
+          resultUmur = 9;
+          console.log(resultUmur);
+        } else if (umur > 55) {
+          resultUmur = 10;
+          console.log(resultUmur);
         }
 
         let getLari = document.querySelector("#lari");
         let lari = getLari.value;
         let resultLari = 0;
+
+        let getPullup = document.querySelector("#pull-up");
+        let pullUp = getPullup.value;
+        let resultPullUp = 0;
+
+        let getSitUp = document.querySelector("#sit-up");
+        let sitUp = getSitUp.value;
+        let resultSitUp = 0;
 
         if (resultKelamin == "pria" && resultUmur == 1) {
           console.log(resultKelamin);
@@ -285,6 +331,108 @@
           } else {
             resultLari = "Masukan Angka";
           }
+          //pull kategori 1 pria
+
+          if (pullUp < 1) {
+            resultPullUp = 0;
+          } else if (pullUp == 1) {
+            resultPullUp = 15;
+          } else if (pullUp == 2) {
+            resultPullUp = 20;
+          } else if (pullUp == 3) {
+            resultPullUp = 25;
+          } else if (pullUp == 4) {
+            resultPullUp = 30;
+          } else if (pullUp == 5) {
+            resultPullUp = 35;
+          } else if (pullUp == 6) {
+            resultPullUp = 40;
+          } else if (pullUp == 7) {
+            resultPullUp = 45;
+          } else if (pullUp == 8) {
+            resultPullUp = 50;
+          } else if (pullUp == 9) {
+            resultPullUp = 55;
+          } else if (pullUp == 10) {
+            resultPullUp = 60;
+          } else if (pullUp == 11) {
+            resultPullUp = 65;
+          } else if (pullUp == 12) {
+            resultPullUp = 70;
+          } else if (pullUp == 13) {
+            resultPullUp = 75;
+          } else if (pullUp == 14) {
+            resultPullUp = 80;
+          } else if (pullUp == 15) {
+            resultPullUp = 85;
+          } else if (pullUp == 16) {
+            resultPullUp = 90;
+          } else if (pullUp == 17) {
+            resultPullUp = 95;
+          } else if (pullUp >= 18) {
+            resultPullUp = 100;
+          }
+
+          // sit Up kategori 1 pria
+          if (sitUp < 14) {
+            resultSitUp = 0;
+          } else if (sitUp == 14) {
+            resultSitUp = 1;
+          } else if (sitUp == 15) {
+            resultSitUp = 4;
+          } else if (sitUp == 16) {
+            resultSitUp = 7;
+          } else if (sitUp == 17) {
+            resultSitUp = 10;
+          } else if (sitUp == 18) {
+            resultSitUp = 13;
+          } else if (sitUp == 19) {
+            resultSitUp = 16;
+          } else if (sitUp == 20) {
+            resultSitUp = 19;
+          } else if (sitUp == 21) {
+            resultSitUp = 22;
+          } else if (sitUp == 22) {
+            resultSitUp = 25;
+          } else if (sitUp == 23) {
+            resultSitUp = 28;
+          } else if (sitUp == 24) {
+            resultSitUp = 31;
+          } else if (sitUp == 25) {
+            resultSitUp = 34;
+          } else if (sitUp == 26) {
+            resultSitUp = 37;
+          } else if (sitUp == 27) {
+            resultSitUp = 40;
+          } else if (sitUp == 28) {
+            resultSitUp = 43;
+          } else if (sitUp == 29) {
+            resultSitUp = 46;
+          } else if (sitUp == 30) {
+            resultSitUp = 49;
+          } else if (sitUp == 31) {
+            resultSitUp = 52;
+          } else if (sitUp == 32) {
+            resultSitUp = 55;
+          } else if (sitUp == 33) {
+            resultSitUp = 60;
+          } else if (sitUp == 34) {
+            resultSitUp = 65;
+          } else if (sitUp == 35) {
+            resultSitUp = 70;
+          } else if (sitUp == 36) {
+            resultSitUp = 75;
+          } else if (sitUp == 37) {
+            resultSitUp = 80;
+          } else if (sitUp == 38) {
+            resultSitUp = 85;
+          } else if (sitUp == 39) {
+            resultSitUp = 90;
+          } else if (sitUp == 40) {
+            resultSitUp = 95;
+          } else if (sitUp >= 41) {
+            resultSitUp = 100;
+          }
         } else if (resultKelamin == "pria" && resultUmur == 2) {
           if (lari >= 3412) {
             resultLari = 100;
@@ -348,9 +496,2661 @@
             resultLari = 71;
           } else if (lari >= 2842) {
             resultLari = 70;
+          } else if (lari >= 2823) {
+            resultLari = 69;
+          } else if (lari >= 2804) {
+            resultLari = 68;
+          } else if (lari >= 2785) {
+            resultLari = 67;
+          } else if (lari >= 2766) {
+            resultLari = 66;
+          } else if (lari >= 2747) {
+            resultLari = 65;
+          } else if (lari >= 2728) {
+            resultLari = 64;
+          } else if (lari >= 2709) {
+            resultLari = 63;
+          } else if (lari >= 2690) {
+            resultLari = 62;
+          } else if (lari >= 2671) {
+            resultLari = 61;
+          } else if (lari >= 2652) {
+            resultLari = 60;
+          } else if (lari >= 2633) {
+            resultLari = 59;
+          } else if (lari >= 2614) {
+            resultLari = 58;
+          } else if (lari >= 2595) {
+            resultLari = 57;
+          } else if (lari >= 2576) {
+            resultLari = 56;
+          } else if (lari >= 2557) {
+            resultLari = 55;
+          } else if (lari >= 2538) {
+            resultLari = 54;
+          } else if (lari >= 2519) {
+            resultLari = 53;
+          } else if (lari >= 2500) {
+            resultLari = 52;
+          } else if (lari >= 2481) {
+            resultLari = 51;
+          } else if (lari >= 2462) {
+            resultLari = 50;
+          } else if (lari >= 2443) {
+            resultLari = 49;
+          } else if (lari >= 2424) {
+            resultLari = 48;
+          } else if (lari >= 2405) {
+            resultLari = 47;
+          } else if (lari >= 2386) {
+            resultLari = 46;
+          } else if (lari >= 2367) {
+            resultLari = 45;
+          } else if (lari >= 2348) {
+            resultLari = 44;
+          } else if (lari >= 2329) {
+            resultLari = 43;
+          } else if (lari >= 2310) {
+            resultLari = 42;
+          } else if (lari >= 2291) {
+            resultLari = 41;
+          } else if (lari >= 2272) {
+            resultLari = 40;
+          } else if (lari >= 2253) {
+            resultLari = 39;
+          } else if (lari >= 2234) {
+            resultLari = 38;
+          } else if (lari >= 2215) {
+            resultLari = 37;
+          } else if (lari >= 2196) {
+            resultLari = 36;
+          } else if (lari >= 2177) {
+            resultLari = 35;
+          } else if (lari >= 2158) {
+            resultLari = 34;
+          } else if (lari >= 2139) {
+            resultLari = 33;
+          } else if (lari >= 2120) {
+            resultLari = 32;
+          } else if (lari >= 2101) {
+            resultLari = 31;
+          } else if (lari >= 2082) {
+            resultLari = 30;
+          } else if (lari >= 2063) {
+            resultLari = 29;
+          } else if (lari >= 2044) {
+            resultLari = 28;
+          } else if (lari >= 2025) {
+            resultLari = 27;
+          } else if (lari >= 2006) {
+            resultLari = 26;
+          } else if (lari >= 1987) {
+            resultLari = 25;
+          } else if (lari >= 1968) {
+            resultLari = 24;
+          } else if (lari >= 1949) {
+            resultLari = 23;
+          } else if (lari >= 1930) {
+            resultLari = 22;
+          } else if (lari >= 1911) {
+            resultLari = 21;
+          } else if (lari >= 1892) {
+            resultLari = 20;
+          } else if (lari >= 1873) {
+            resultLari = 19;
+          } else if (lari >= 1968) {
+            resultLari = 24;
+          } else if (lari >= 1949) {
+            resultLari = 23;
+          } else if (lari >= 1930) {
+            resultLari = 22;
+          } else if (lari >= 1911) {
+            resultLari = 21;
+          } else if (lari >= 1892) {
+            resultLari = 20;
+          } else if (lari >= 1873) {
+            resultLari = 19;
+          } else if (lari >= 1854) {
+            resultLari = 18;
+          } else if (lari >= 1835) {
+            resultLari = 17;
+          } else if (lari >= 1816) {
+            resultLari = 16;
+          } else if (lari >= 1797) {
+            resultLari = 15;
+          } else if (lari >= 1778) {
+            resultLari = 14;
+          } else if (lari >= 1759) {
+            resultLari = 13;
+          } else if (lari >= 1740) {
+            resultLari = 12;
+          } else if (lari >= 1721) {
+            resultLari = 11;
+          } else if (lari >= 1702) {
+            resultLari = 10;
+          } else if (lari >= 1683) {
+            resultLari = 9;
+          } else if (lari >= 1664) {
+            resultLari = 8;
+          } else if (lari >= 1645) {
+            resultLari = 7;
+          } else if (lari >= 1626) {
+            resultLari = 6;
+          } else if (lari >= 1607) {
+            resultLari = 5;
+          } else if (lari >= 1588) {
+            resultLari = 4;
+          } else if (lari >= 1569) {
+            resultLari = 3;
+          } else if (lari >= 1550) {
+            resultLari = 2;
+          } else if (lari >= 1531) {
+            resultLari = 1;
+          } else if (lari < 1531) {
+            resultLari = 0;
+          }
+          //pull kategori 2 pria
+
+          if (pullUp < 1) {
+            resultPullUp = 0;
+          } else if (pullUp == 1) {
+            resultPullUp = 20;
+          } else if (pullUp == 2) {
+            resultPullUp = 25;
+          } else if (pullUp == 3) {
+            resultPullUp = 30;
+          } else if (pullUp == 4) {
+            resultPullUp = 35;
+          } else if (pullUp == 5) {
+            resultPullUp = 40;
+          } else if (pullUp == 6) {
+            resultPullUp = 45;
+          } else if (pullUp == 7) {
+            resultPullUp = 50;
+          } else if (pullUp == 8) {
+            resultPullUp = 55;
+          } else if (pullUp == 9) {
+            resultPullUp = 60;
+          } else if (pullUp == 10) {
+            resultPullUp = 65;
+          } else if (pullUp == 11) {
+            resultPullUp = 70;
+          } else if (pullUp == 12) {
+            resultPullUp = 75;
+          } else if (pullUp == 13) {
+            resultPullUp = 80;
+          } else if (pullUp == 14) {
+            resultPullUp = 85;
+          } else if (pullUp == 15) {
+            resultPullUp = 90;
+          } else if (pullUp == 16) {
+            resultPullUp = 95;
+          } else if (pullUp >= 17) {
+            resultPullUp = 100;
+          }
+
+          // sit Up kategori 2 pria
+          if (sitUp < 12) {
+            resultSitUp = 0;
+          } else if (sitUp == 13) {
+            resultSitUp = 3;
+          } else if (sitUp == 14) {
+            resultSitUp = 6;
+          } else if (sitUp == 15) {
+            resultSitUp = 9;
+          } else if (sitUp == 16) {
+            resultSitUp = 12;
+          } else if (sitUp == 17) {
+            resultSitUp = 15;
+          } else if (sitUp == 18) {
+            resultSitUp = 18;
+          } else if (sitUp == 19) {
+            resultSitUp = 21;
+          } else if (sitUp == 20) {
+            resultSitUp = 24;
+          } else if (sitUp == 21) {
+            resultSitUp = 27;
+          } else if (sitUp == 22) {
+            resultSitUp = 30;
+          } else if (sitUp == 23) {
+            resultSitUp = 33;
+          } else if (sitUp == 24) {
+            resultSitUp = 36;
+          } else if (sitUp == 25) {
+            resultSitUp = 39;
+          } else if (sitUp == 26) {
+            resultSitUp = 42;
+          } else if (sitUp == 27) {
+            resultSitUp = 45;
+          } else if (sitUp == 28) {
+            resultSitUp = 48;
+          } else if (sitUp == 29) {
+            resultSitUp = 51;
+          } else if (sitUp == 30) {
+            resultSitUp = 54;
+          } else if (sitUp == 31) {
+            resultSitUp = 57;
+          } else if (sitUp == 32) {
+            resultSitUp = 60;
+          } else if (sitUp == 33) {
+            resultSitUp = 65;
+          } else if (sitUp == 34) {
+            resultSitUp = 70;
+          } else if (sitUp == 35) {
+            resultSitUp = 75;
+          } else if (sitUp == 36) {
+            resultSitUp = 80;
+          } else if (sitUp == 37) {
+            resultSitUp = 85;
+          } else if (sitUp == 38) {
+            resultSitUp = 90;
+          } else if (sitUp == 39) {
+            resultSitUp = 95;
+          } else if (sitUp >= 40) {
+            resultSitUp = 100;
           }
         } else if (resultKelamin == "pria" && resultUmur == 3) {
+          if (lari >= 3317) {
+            resultLari = 100;
+          } else if (lari >= 3298) {
+            resultLari = 99;
+          } else if (lari >= 3279) {
+            resultLari = 98;
+          } else if (lari >= 3260) {
+            resultLari = 97;
+          } else if (lari >= 3241) {
+            resultLari = 96;
+          } else if (lari >= 3222) {
+            resultLari = 95;
+          } else if (lari >= 3203) {
+            resultLari = 94;
+          } else if (lari >= 3184) {
+            resultLari = 93;
+          } else if (lari >= 3165) {
+            resultLari = 92;
+          } else if (lari >= 3146) {
+            resultLari = 91;
+          } else if (lari >= 3127) {
+            resultLari = 90;
+          } else if (lari >= 3108) {
+            resultLari = 89;
+          } else if (lari >= 3089) {
+            resultLari = 88;
+          } else if (lari >= 3070) {
+            resultLari = 87;
+          } else if (lari >= 3051) {
+            resultLari = 86;
+          } else if (lari >= 3032) {
+            resultLari = 85;
+          } else if (lari >= 3013) {
+            resultLari = 84;
+          } else if (lari >= 2994) {
+            resultLari = 83;
+          } else if (lari >= 2975) {
+            resultLari = 82;
+          } else if (lari >= 2956) {
+            resultLari = 81;
+          } else if (lari >= 2937) {
+            resultLari = 80;
+          } else if (lari >= 2918) {
+            resultLari = 79;
+          } else if (lari >= 2899) {
+            resultLari = 78;
+          } else if (lari >= 2880) {
+            resultLari = 77;
+          } else if (lari >= 2861) {
+            resultLari = 76;
+          } else if (lari >= 2842) {
+            resultLari = 75;
+          } else if (lari >= 2823) {
+            resultLari = 74;
+          } else if (lari >= 2804) {
+            resultLari = 73;
+          } else if (lari >= 2785) {
+            resultLari = 72;
+          } else if (lari >= 2766) {
+            resultLari = 71;
+          } else if (lari >= 2747) {
+            resultLari = 70;
+          } else if (lari >= 2728) {
+            resultLari = 69;
+          } else if (lari >= 2709) {
+            resultLari = 68;
+          } else if (lari >= 2690) {
+            resultLari = 67;
+          } else if (lari >= 2671) {
+            resultLari = 66;
+          } else if (lari >= 2652) {
+            resultLari = 65;
+          } else if (lari >= 2633) {
+            resultLari = 64;
+          } else if (lari >= 2614) {
+            resultLari = 63;
+          } else if (lari >= 2595) {
+            resultLari = 62;
+          } else if (lari >= 2576) {
+            resultLari = 61;
+          } else if (lari >= 2557) {
+            resultLari = 60;
+          } else if (lari >= 2538) {
+            resultLari = 59;
+          } else if (lari >= 2519) {
+            resultLari = 58;
+          } else if (lari >= 2500) {
+            resultLari = 57;
+          } else if (lari >= 2481) {
+            resultLari = 56;
+          } else if (lari >= 2462) {
+            resultLari = 55;
+          } else if (lari >= 2443) {
+            resultLari = 54;
+          } else if (lari >= 2424) {
+            resultLari = 53;
+          } else if (lari >= 2405) {
+            resultLari = 52;
+          } else if (lari >= 2386) {
+            resultLari = 51;
+          } else if (lari >= 2367) {
+            resultLari = 50;
+          } else if (lari >= 2348) {
+            resultLari = 49;
+          } else if (lari >= 2329) {
+            resultLari = 48;
+          } else if (lari >= 2310) {
+            resultLari = 47;
+          } else if (lari >= 2291) {
+            resultLari = 46;
+          } else if (lari >= 2272) {
+            resultLari = 45;
+          } else if (lari >= 2253) {
+            resultLari = 44;
+          } else if (lari >= 2234) {
+            resultLari = 43;
+          } else if (lari >= 2215) {
+            resultLari = 42;
+          } else if (lari >= 2196) {
+            resultLari = 41;
+          } else if (lari >= 2177) {
+            resultLari = 40;
+          } else if (lari >= 2158) {
+            resultLari = 39;
+          } else if (lari >= 2139) {
+            resultLari = 38;
+          } else if (lari >= 2120) {
+            resultLari = 37;
+          } else if (lari >= 2101) {
+            resultLari = 36;
+          } else if (lari >= 2082) {
+            resultLari = 35;
+          } else if (lari >= 2063) {
+            resultLari = 34;
+          } else if (lari >= 2044) {
+            resultLari = 33;
+          } else if (lari >= 2025) {
+            resultLari = 32;
+          } else if (lari >= 2006) {
+            resultLari = 31;
+          } else if (lari >= 1987) {
+            resultLari = 30;
+          } else if (lari >= 1968) {
+            resultLari = 29;
+          } else if (lari >= 1949) {
+            resultLari = 28;
+          } else if (lari >= 1930) {
+            resultLari = 27;
+          } else if (lari >= 1911) {
+            resultLari = 26;
+          } else if (lari >= 1892) {
+            resultLari = 25;
+          } else if (lari >= 1873) {
+            resultLari = 24;
+          } else if (lari >= 1854) {
+            resultLari = 23;
+          } else if (lari >= 1835) {
+            resultLari = 22;
+          } else if (lari >= 1816) {
+            resultLari = 21;
+          } else if (lari >= 1797) {
+            resultLari = 20;
+          } else if (lari >= 1778) {
+            resultLari = 19;
+          } else if (lari >= 1759) {
+            resultLari = 18;
+          } else if (lari >= 1740) {
+            resultLari = 17;
+          } else if (lari >= 1721) {
+            resultLari = 16;
+          } else if (lari >= 1702) {
+            resultLari = 15;
+          } else if (lari >= 1683) {
+            resultLari = 14;
+          } else if (lari >= 1664) {
+            resultLari = 13;
+          } else if (lari >= 1645) {
+            resultLari = 12;
+          } else if (lari >= 1626) {
+            resultLari = 11;
+          } else if (lari >= 1607) {
+            resultLari = 10;
+          } else if (lari >= 1588) {
+            resultLari = 9;
+          } else if (lari >= 1569) {
+            resultLari = 8;
+          } else if (lari >= 1550) {
+            resultLari = 7;
+          } else if (lari >= 1531) {
+            resultLari = 6;
+          } else if (lari >= 1512) {
+            resultLari = 5;
+          } else if (lari >= 1493) {
+            resultLari = 4;
+          } else if (lari >= 1474) {
+            resultLari = 3;
+          } else if (lari >= 1455) {
+            resultLari = 2;
+          } else if (lari >= 1436) {
+            resultLari = 1;
+          } else if (lari < 1436) {
+            resultLari = 0;
+          }
+
+          //pull kategori 3 pria
+          if (pullUp < 1) {
+            resultPullUp = 0;
+          } else if (pullUp == 1) {
+            resultPullUp = 25;
+          } else if (pullUp == 2) {
+            resultPullUp = 30;
+          } else if (pullUp == 3) {
+            resultPullUp = 35;
+          } else if (pullUp == 4) {
+            resultPullUp = 40;
+          } else if (pullUp == 5) {
+            resultPullUp = 45;
+          } else if (pullUp == 6) {
+            resultPullUp = 50;
+          } else if (pullUp == 7) {
+            resultPullUp = 55;
+          } else if (pullUp == 8) {
+            resultPullUp = 60;
+          } else if (pullUp == 9) {
+            resultPullUp = 65;
+          } else if (pullUp == 10) {
+            resultPullUp = 70;
+          } else if (pullUp == 11) {
+            resultPullUp = 75;
+          } else if (pullUp == 12) {
+            resultPullUp = 80;
+          } else if (pullUp == 13) {
+            resultPullUp = 85;
+          } else if (pullUp == 14) {
+            resultPullUp = 90;
+          } else if (pullUp == 15) {
+            resultPullUp = 95;
+          } else if (pullUp >= 16) {
+            resultPullUp = 100;
+          }
+
+          // sit Up kategori 3 pria
+          if (sitUp < 10) {
+            resultSitUp = 0;
+          } else if (sitUp == 11) {
+            resultSitUp = 3;
+          } else if (sitUp == 12) {
+            resultSitUp = 5;
+          } else if (sitUp == 13) {
+            resultSitUp = 8;
+          } else if (sitUp == 14) {
+            resultSitUp = 11;
+          } else if (sitUp == 15) {
+            resultSitUp = 14;
+          } else if (sitUp == 16) {
+            resultSitUp = 17;
+          } else if (sitUp == 17) {
+            resultSitUp = 20;
+          } else if (sitUp == 18) {
+            resultSitUp = 23;
+          } else if (sitUp == 19) {
+            resultSitUp = 26;
+          } else if (sitUp == 20) {
+            resultSitUp = 29;
+          } else if (sitUp == 21) {
+            resultSitUp = 32;
+          } else if (sitUp == 22) {
+            resultSitUp = 35;
+          } else if (sitUp == 23) {
+            resultSitUp = 38;
+          } else if (sitUp == 24) {
+            resultSitUp = 41;
+          } else if (sitUp == 25) {
+            resultSitUp = 44;
+          } else if (sitUp == 26) {
+            resultSitUp = 47;
+          } else if (sitUp == 27) {
+            resultSitUp = 50;
+          } else if (sitUp == 28) {
+            resultSitUp = 53;
+          } else if (sitUp == 29) {
+            resultSitUp = 56;
+          } else if (sitUp == 30) {
+            resultSitUp = 59;
+          } else if (sitUp == 31) {
+            resultSitUp = 62;
+          } else if (sitUp == 32) {
+            resultSitUp = 65;
+          } else if (sitUp == 33) {
+            resultSitUp = 70;
+          } else if (sitUp == 34) {
+            resultSitUp = 75;
+          } else if (sitUp == 35) {
+            resultSitUp = 80;
+          } else if (sitUp == 36) {
+            resultSitUp = 85;
+          } else if (sitUp == 37) {
+            resultSitUp = 90;
+          } else if (sitUp == 38) {
+            resultSitUp = 95;
+          } else if (sitUp >= 39) {
+            resultSitUp = 100;
+          }
         } else if (resultKelamin == "pria" && resultUmur == 4) {
+          if (lari >= 3222) {
+            resultLari = 100;
+          } else if (lari >= 3203) {
+            resultLari = 99;
+          } else if (lari >= 3184) {
+            resultLari = 98;
+          } else if (lari >= 3165) {
+            resultLari = 97;
+          } else if (lari >= 3146) {
+            resultLari = 96;
+          } else if (lari >= 3127) {
+            resultLari = 95;
+          } else if (lari >= 3108) {
+            resultLari = 94;
+          } else if (lari >= 3089) {
+            resultLari = 93;
+          } else if (lari >= 3070) {
+            resultLari = 92;
+          } else if (lari >= 3051) {
+            resultLari = 91;
+          } else if (lari >= 3032) {
+            resultLari = 90;
+          } else if (lari >= 3013) {
+            resultLari = 89;
+          } else if (lari >= 2994) {
+            resultLari = 88;
+          } else if (lari >= 2975) {
+            resultLari = 87;
+          } else if (lari >= 2956) {
+            resultLari = 86;
+          } else if (lari >= 2937) {
+            resultLari = 85;
+          } else if (lari >= 2918) {
+            resultLari = 84;
+          } else if (lari >= 2899) {
+            resultLari = 83;
+          } else if (lari >= 2880) {
+            resultLari = 82;
+          } else if (lari >= 2861) {
+            resultLari = 81;
+          } else if (lari >= 2842) {
+            resultLari = 80;
+          } else if (lari >= 2823) {
+            resultLari = 79;
+          } else if (lari >= 2804) {
+            resultLari = 78;
+          } else if (lari >= 2785) {
+            resultLari = 77;
+          } else if (lari >= 2766) {
+            resultLari = 76;
+          } else if (lari >= 2747) {
+            resultLari = 75;
+          } else if (lari >= 2728) {
+            resultLari = 74;
+          } else if (lari >= 2709) {
+            resultLari = 73;
+          } else if (lari >= 2690) {
+            resultLari = 72;
+          } else if (lari >= 2671) {
+            resultLari = 71;
+          } else if (lari >= 2652) {
+            resultLari = 70;
+          } else if (lari >= 2633) {
+            resultLari = 69;
+          } else if (lari >= 2614) {
+            resultLari = 68;
+          } else if (lari >= 2595) {
+            resultLari = 67;
+          } else if (lari >= 2576) {
+            resultLari = 66;
+          } else if (lari >= 2557) {
+            resultLari = 65;
+          } else if (lari >= 2538) {
+            resultLari = 64;
+          } else if (lari >= 2519) {
+            resultLari = 63;
+          } else if (lari >= 2500) {
+            resultLari = 62;
+          } else if (lari >= 2481) {
+            resultLari = 61;
+          } else if (lari >= 2462) {
+            resultLari = 60;
+          } else if (lari >= 2443) {
+            resultLari = 59;
+          } else if (lari >= 2424) {
+            resultLari = 58;
+          } else if (lari >= 2405) {
+            resultLari = 57;
+          } else if (lari >= 2386) {
+            resultLari = 56;
+          } else if (lari >= 2367) {
+            resultLari = 55;
+          } else if (lari >= 2348) {
+            resultLari = 54;
+          } else if (lari >= 2329) {
+            resultLari = 53;
+          } else if (lari >= 2310) {
+            resultLari = 52;
+          } else if (lari >= 2291) {
+            resultLari = 51;
+          } else if (lari >= 2272) {
+            resultLari = 50;
+          } else if (lari >= 2253) {
+            resultLari = 49;
+          } else if (lari >= 2234) {
+            resultLari = 48;
+          } else if (lari >= 2215) {
+            resultLari = 47;
+          } else if (lari >= 2196) {
+            resultLari = 46;
+          } else if (lari >= 2177) {
+            resultLari = 45;
+          } else if (lari >= 2158) {
+            resultLari = 44;
+          } else if (lari >= 2139) {
+            resultLari = 43;
+          } else if (lari >= 2120) {
+            resultLari = 42;
+          } else if (lari >= 2101) {
+            resultLari = 41;
+          } else if (lari >= 2082) {
+            resultLari = 40;
+          } else if (lari >= 2063) {
+            resultLari = 39;
+          } else if (lari >= 2044) {
+            resultLari = 38;
+          } else if (lari >= 2025) {
+            resultLari = 37;
+          } else if (lari >= 2006) {
+            resultLari = 36;
+          } else if (lari >= 1987) {
+            resultLari = 35;
+          } else if (lari >= 1968) {
+            resultLari = 34;
+          } else if (lari >= 1949) {
+            resultLari = 33;
+          } else if (lari >= 1930) {
+            resultLari = 32;
+          } else if (lari >= 1911) {
+            resultLari = 31;
+          } else if (lari >= 1892) {
+            resultLari = 30;
+          } else if (lari >= 1873) {
+            resultLari = 29;
+          } else if (lari >= 1854) {
+            resultLari = 28;
+          } else if (lari >= 1835) {
+            resultLari = 27;
+          } else if (lari >= 1816) {
+            resultLari = 26;
+          } else if (lari >= 1797) {
+            resultLari = 25;
+          } else if (lari >= 1778) {
+            resultLari = 24;
+          } else if (lari >= 1759) {
+            resultLari = 23;
+          } else if (lari >= 1740) {
+            resultLari = 22;
+          } else if (lari >= 1721) {
+            resultLari = 21;
+          } else if (lari >= 1702) {
+            resultLari = 20;
+          } else if (lari >= 1683) {
+            resultLari = 19;
+          } else if (lari >= 1664) {
+            resultLari = 18;
+          } else if (lari >= 1645) {
+            resultLari = 17;
+          } else if (lari >= 1626) {
+            resultLari = 16;
+          } else if (lari >= 1607) {
+            resultLari = 15;
+          } else if (lari >= 1588) {
+            resultLari = 14;
+          } else if (lari >= 1569) {
+            resultLari = 13;
+          } else if (lari >= 1550) {
+            resultLari = 12;
+          } else if (lari >= 1531) {
+            resultLari = 11;
+          } else if (lari >= 1512) {
+            resultLari = 10;
+          } else if (lari >= 1493) {
+            resultLari = 9;
+          } else if (lari >= 1474) {
+            resultLari = 8;
+          } else if (lari >= 1455) {
+            resultLari = 7;
+          } else if (lari >= 1436) {
+            resultLari = 6;
+          } else if (lari >= 1417) {
+            resultLari = 5;
+          } else if (lari >= 1398) {
+            resultLari = 4;
+          } else if (lari >= 1379) {
+            resultLari = 3;
+          } else if (lari >= 1360) {
+            resultLari = 2;
+          } else if (lari >= 1341) {
+            resultLari = 1;
+          } else if (lari < 1341) {
+            resultLari = 0;
+          }
+          //pull kategori 4 pria
+          if (pullUp < 1) {
+            resultPullUp = 0;
+          } else if (pullUp == 1) {
+            resultPullUp = 30;
+          } else if (pullUp == 2) {
+            resultPullUp = 35;
+          } else if (pullUp == 3) {
+            resultPullUp = 40;
+          } else if (pullUp == 4) {
+            resultPullUp = 45;
+          } else if (pullUp == 5) {
+            resultPullUp = 50;
+          } else if (pullUp == 6) {
+            resultPullUp = 55;
+          } else if (pullUp == 7) {
+            resultPullUp = 60;
+          } else if (pullUp == 8) {
+            resultPullUp = 65;
+          } else if (pullUp == 9) {
+            resultPullUp = 70;
+          } else if (pullUp == 10) {
+            resultPullUp = 75;
+          } else if (pullUp == 11) {
+            resultPullUp = 80;
+          } else if (pullUp == 12) {
+            resultPullUp = 85;
+          } else if (pullUp == 13) {
+            resultPullUp = 90;
+          } else if (pullUp == 14) {
+            resultPullUp = 95;
+          } else if (pullUp >= 15) {
+            resultPullUp = 100;
+          }
+
+          // sit Up kategori 4 pria
+          if (sitUp < 9) {
+            resultSitUp = 0;
+          } else if (sitUp == 9) {
+            resultSitUp = 1;
+          } else if (sitUp == 10) {
+            resultSitUp = 4;
+          } else if (sitUp == 11) {
+            resultSitUp = 7;
+          } else if (sitUp == 12) {
+            resultSitUp = 10;
+          } else if (sitUp == 13) {
+            resultSitUp = 13;
+          } else if (sitUp == 14) {
+            resultSitUp = 16;
+          } else if (sitUp == 15) {
+            resultSitUp = 19;
+          } else if (sitUp == 16) {
+            resultSitUp = 22;
+          } else if (sitUp == 17) {
+            resultSitUp = 25;
+          } else if (sitUp == 18) {
+            resultSitUp = 28;
+          } else if (sitUp == 19) {
+            resultSitUp = 31;
+          } else if (sitUp == 20) {
+            resultSitUp = 34;
+          } else if (sitUp == 21) {
+            resultSitUp = 37;
+          } else if (sitUp == 22) {
+            resultSitUp = 40;
+          } else if (sitUp == 23) {
+            resultSitUp = 43;
+          } else if (sitUp == 24) {
+            resultSitUp = 46;
+          } else if (sitUp == 25) {
+            resultSitUp = 49;
+          } else if (sitUp == 26) {
+            resultSitUp = 52;
+          } else if (sitUp == 27) {
+            resultSitUp = 55;
+          } else if (sitUp == 28) {
+            resultSitUp = 58;
+          } else if (sitUp == 29) {
+            resultSitUp = 61;
+          } else if (sitUp == 30) {
+            resultSitUp = 64;
+          } else if (sitUp == 31) {
+            resultSitUp = 67;
+          } else if (sitUp == 32) {
+            resultSitUp = 70;
+          } else if (sitUp == 33) {
+            resultSitUp = 75;
+          } else if (sitUp == 34) {
+            resultSitUp = 80;
+          } else if (sitUp == 35) {
+            resultSitUp = 85;
+          } else if (sitUp == 36) {
+            resultSitUp = 90;
+          } else if (sitUp == 37) {
+            resultSitUp = 95;
+          } else if (sitUp >= 38) {
+            resultSitUp = 100;
+          }
+        } else if (resultKelamin == "pria" && resultUmur == 5) {
+          if (lari >= 3127) {
+            resultLari = 100;
+          } else if (lari >= 3108) {
+            resultLari = 99;
+          } else if (lari >= 3089) {
+            resultLari = 98;
+          } else if (lari >= 3070) {
+            resultLari = 97;
+          } else if (lari >= 3051) {
+            resultLari = 96;
+          } else if (lari >= 3032) {
+            resultLari = 95;
+          } else if (lari >= 3013) {
+            resultLari = 94;
+          } else if (lari >= 2994) {
+            resultLari = 93;
+          } else if (lari >= 2975) {
+            resultLari = 92;
+          } else if (lari >= 2956) {
+            resultLari = 91;
+          } else if (lari >= 2937) {
+            resultLari = 90;
+          } else if (lari >= 2918) {
+            resultLari = 89;
+          } else if (lari >= 2899) {
+            resultLari = 88;
+          } else if (lari >= 2880) {
+            resultLari = 87;
+          } else if (lari >= 2861) {
+            resultLari = 86;
+          } else if (lari >= 2842) {
+            resultLari = 85;
+          } else if (lari >= 2823) {
+            resultLari = 84;
+          } else if (lari >= 2804) {
+            resultLari = 83;
+          } else if (lari >= 2785) {
+            resultLari = 82;
+          } else if (lari >= 2766) {
+            resultLari = 81;
+          } else if (lari >= 2747) {
+            resultLari = 80;
+          } else if (lari >= 2728) {
+            resultLari = 79;
+          } else if (lari >= 2709) {
+            resultLari = 78;
+          } else if (lari >= 2690) {
+            resultLari = 77;
+          } else if (lari >= 2671) {
+            resultLari = 76;
+          } else if (lari >= 2652) {
+            resultLari = 75;
+          } else if (lari >= 2633) {
+            resultLari = 74;
+          } else if (lari >= 2614) {
+            resultLari = 73;
+          } else if (lari >= 2595) {
+            resultLari = 72;
+          } else if (lari >= 2576) {
+            resultLari = 71;
+          } else if (lari >= 2557) {
+            resultLari = 70;
+          } else if (lari >= 2538) {
+            resultLari = 69;
+          } else if (lari >= 2519) {
+            resultLari = 68;
+          } else if (lari >= 2500) {
+            resultLari = 67;
+          } else if (lari >= 2481) {
+            resultLari = 66;
+          } else if (lari >= 2462) {
+            resultLari = 65;
+          } else if (lari >= 2443) {
+            resultLari = 64;
+          } else if (lari >= 2424) {
+            resultLari = 63;
+          } else if (lari >= 2405) {
+            resultLari = 62;
+          } else if (lari >= 2386) {
+            resultLari = 61;
+          } else if (lari >= 2367) {
+            resultLari = 60;
+          } else if (lari >= 2348) {
+            resultLari = 59;
+          } else if (lari >= 2329) {
+            resultLari = 58;
+          } else if (lari >= 2310) {
+            resultLari = 57;
+          } else if (lari >= 2291) {
+            resultLari = 56;
+          } else if (lari >= 2272) {
+            resultLari = 55;
+          } else if (lari >= 2253) {
+            resultLari = 54;
+          } else if (lari >= 2234) {
+            resultLari = 53;
+          } else if (lari >= 2215) {
+            resultLari = 52;
+          } else if (lari >= 2196) {
+            resultLari = 51;
+          } else if (lari >= 2177) {
+            resultLari = 50;
+          } else if (lari >= 2158) {
+            resultLari = 49;
+          } else if (lari >= 2139) {
+            resultLari = 48;
+          } else if (lari >= 2120) {
+            resultLari = 47;
+          } else if (lari >= 2101) {
+            resultLari = 46;
+          } else if (lari >= 2082) {
+            resultLari = 45;
+          } else if (lari >= 2063) {
+            resultLari = 44;
+          } else if (lari >= 2044) {
+            resultLari = 43;
+          } else if (lari >= 2025) {
+            resultLari = 42;
+          } else if (lari >= 2006) {
+            resultLari = 41;
+          } else if (lari >= 1987) {
+            resultLari = 40;
+          } else if (lari >= 1968) {
+            resultLari = 39;
+          } else if (lari >= 1949) {
+            resultLari = 38;
+          } else if (lari >= 1930) {
+            resultLari = 37;
+          } else if (lari >= 1911) {
+            resultLari = 36;
+          } else if (lari >= 1892) {
+            resultLari = 35;
+          } else if (lari >= 1873) {
+            resultLari = 34;
+          } else if (lari >= 1854) {
+            resultLari = 33;
+          } else if (lari >= 1835) {
+            resultLari = 32;
+          } else if (lari >= 1816) {
+            resultLari = 31;
+          } else if (lari >= 1797) {
+            resultLari = 30;
+          } else if (lari >= 1778) {
+            resultLari = 29;
+          } else if (lari >= 1759) {
+            resultLari = 28;
+          } else if (lari >= 1740) {
+            resultLari = 27;
+          } else if (lari >= 1721) {
+            resultLari = 26;
+          } else if (lari >= 1702) {
+            resultLari = 25;
+          } else if (lari >= 1683) {
+            resultLari = 24;
+          } else if (lari >= 1664) {
+            resultLari = 23;
+          } else if (lari >= 1645) {
+            resultLari = 22;
+          } else if (lari >= 1626) {
+            resultLari = 21;
+          } else if (lari >= 1607) {
+            resultLari = 20;
+          } else if (lari >= 1588) {
+            resultLari = 19;
+          } else if (lari >= 1569) {
+            resultLari = 18;
+          } else if (lari >= 1550) {
+            resultLari = 17;
+          } else if (lari >= 1531) {
+            resultLari = 16;
+          } else if (lari >= 1512) {
+            resultLari = 15;
+          } else if (lari >= 1493) {
+            resultLari = 14;
+          } else if (lari >= 1474) {
+            resultLari = 13;
+          } else if (lari >= 1455) {
+            resultLari = 12;
+          } else if (lari >= 1436) {
+            resultLari = 11;
+          } else if (lari >= 1417) {
+            resultLari = 10;
+          } else if (lari >= 1398) {
+            resultLari = 9;
+          } else if (lari >= 1379) {
+            resultLari = 8;
+          } else if (lari >= 1360) {
+            resultLari = 7;
+          } else if (lari >= 1341) {
+            resultLari = 6;
+          } else if (lari >= 1322) {
+            resultLari = 5;
+          } else if (lari >= 1303) {
+            resultLari = 4;
+          } else if (lari >= 1284) {
+            resultLari = 3;
+          } else if (lari >= 1265) {
+            resultLari = 2;
+          } else if (lari >= 1246) {
+            resultLari = 1;
+          } else if (lari < 1246) {
+            resultLari = 0;
+          }
+          //pull kategori 5 pria
+          if (pullUp < 1) {
+            resultPullUp = 0;
+          } else if (pullUp == 1) {
+            resultPullUp = 35;
+          } else if (pullUp == 2) {
+            resultPullUp = 40;
+          } else if (pullUp == 3) {
+            resultPullUp = 45;
+          } else if (pullUp == 4) {
+            resultPullUp = 50;
+          } else if (pullUp == 5) {
+            resultPullUp = 55;
+          } else if (pullUp == 6) {
+            resultPullUp = 60;
+          } else if (pullUp == 7) {
+            resultPullUp = 65;
+          } else if (pullUp == 8) {
+            resultPullUp = 70;
+          } else if (pullUp == 9) {
+            resultPullUp = 75;
+          } else if (pullUp == 10) {
+            resultPullUp = 80;
+          } else if (pullUp == 11) {
+            resultPullUp = 85;
+          } else if (pullUp == 12) {
+            resultPullUp = 90;
+          } else if (pullUp == 13) {
+            resultPullUp = 95;
+          } else if (pullUp >= 14) {
+            resultPullUp = 100;
+          }
+          // sit Up kategori 5 pria
+          if (sitUp < 8) {
+            resultSitUp = 0;
+          } else if (sitUp == 8) {
+            resultSitUp = 3;
+          } else if (sitUp == 9) {
+            resultSitUp = 6;
+          } else if (sitUp == 10) {
+            resultSitUp = 9;
+          } else if (sitUp == 11) {
+            resultSitUp = 12;
+          } else if (sitUp == 12) {
+            resultSitUp = 15;
+          } else if (sitUp == 13) {
+            resultSitUp = 18;
+          } else if (sitUp == 14) {
+            resultSitUp = 21;
+          } else if (sitUp == 15) {
+            resultSitUp = 24;
+          } else if (sitUp == 16) {
+            resultSitUp = 27;
+          } else if (sitUp == 17) {
+            resultSitUp = 30;
+          } else if (sitUp == 18) {
+            resultSitUp = 33;
+          } else if (sitUp == 19) {
+            resultSitUp = 36;
+          } else if (sitUp == 20) {
+            resultSitUp = 39;
+          } else if (sitUp == 21) {
+            resultSitUp = 42;
+          } else if (sitUp == 22) {
+            resultSitUp = 45;
+          } else if (sitUp == 23) {
+            resultSitUp = 48;
+          } else if (sitUp == 24) {
+            resultSitUp = 51;
+          } else if (sitUp == 25) {
+            resultSitUp = 54;
+          } else if (sitUp == 26) {
+            resultSitUp = 57;
+          } else if (sitUp == 27) {
+            resultSitUp = 60;
+          } else if (sitUp == 28) {
+            resultSitUp = 63;
+          } else if (sitUp == 29) {
+            resultSitUp = 66;
+          } else if (sitUp == 30) {
+            resultSitUp = 69;
+          } else if (sitUp == 31) {
+            resultSitUp = 72;
+          } else if (sitUp == 32) {
+            resultSitUp = 75;
+          } else if (sitUp == 33) {
+            resultSitUp = 80;
+          } else if (sitUp == 34) {
+            resultSitUp = 85;
+          } else if (sitUp == 35) {
+            resultSitUp = 90;
+          } else if (sitUp == 36) {
+            resultSitUp = 95;
+          } else if (sitUp >= 37) {
+            resultSitUp = 100;
+          }
+        } else if (resultKelamin == "pria" && resultUmur == 6) {
+          if (lari >= 3032) {
+            resultLari = 100;
+          } else if (lari >= 3013) {
+            resultLari = 99;
+          } else if (lari >= 2994) {
+            resultLari = 98;
+          } else if (lari >= 2975) {
+            resultLari = 97;
+          } else if (lari >= 2956) {
+            resultLari = 96;
+          } else if (lari >= 2937) {
+            resultLari = 95;
+          } else if (lari >= 2918) {
+            resultLari = 94;
+          } else if (lari >= 2899) {
+            resultLari = 93;
+          } else if (lari >= 2880) {
+            resultLari = 92;
+          } else if (lari >= 2861) {
+            resultLari = 91;
+          } else if (lari >= 2842) {
+            resultLari = 90;
+          } else if (lari >= 2823) {
+            resultLari = 89;
+          } else if (lari >= 2804) {
+            resultLari = 88;
+          } else if (lari >= 2785) {
+            resultLari = 87;
+          } else if (lari >= 2766) {
+            resultLari = 86;
+          } else if (lari >= 2747) {
+            resultLari = 85;
+          } else if (lari >= 2728) {
+            resultLari = 84;
+          } else if (lari >= 2709) {
+            resultLari = 83;
+          } else if (lari >= 2690) {
+            resultLari = 82;
+          } else if (lari >= 2671) {
+            resultLari = 81;
+          } else if (lari >= 2652) {
+            resultLari = 80;
+          } else if (lari >= 2633) {
+            resultLari = 79;
+          } else if (lari >= 2614) {
+            resultLari = 78;
+          } else if (lari >= 2595) {
+            resultLari = 77;
+          } else if (lari >= 2576) {
+            resultLari = 76;
+          } else if (lari >= 2557) {
+            resultLari = 75;
+          } else if (lari >= 2538) {
+            resultLari = 74;
+          } else if (lari >= 2519) {
+            resultLari = 73;
+          } else if (lari >= 2500) {
+            resultLari = 72;
+          } else if (lari >= 2481) {
+            resultLari = 71;
+          } else if (lari >= 2462) {
+            resultLari = 70;
+          } else if (lari >= 2443) {
+            resultLari = 69;
+          } else if (lari >= 2424) {
+            resultLari = 68;
+          } else if (lari >= 2405) {
+            resultLari = 67;
+          } else if (lari >= 2386) {
+            resultLari = 66;
+          } else if (lari >= 2367) {
+            resultLari = 65;
+          } else if (lari >= 2348) {
+            resultLari = 64;
+          } else if (lari >= 2329) {
+            resultLari = 63;
+          } else if (lari >= 2310) {
+            resultLari = 62;
+          } else if (lari >= 2291) {
+            resultLari = 61;
+          } else if (lari >= 2272) {
+            resultLari = 60;
+          } else if (lari >= 2253) {
+            resultLari = 59;
+          } else if (lari >= 2234) {
+            resultLari = 58;
+          } else if (lari >= 2215) {
+            resultLari = 57;
+          } else if (lari >= 2196) {
+            resultLari = 56;
+          } else if (lari >= 2177) {
+            resultLari = 55;
+          } else if (lari >= 2158) {
+            resultLari = 54;
+          } else if (lari >= 2139) {
+            resultLari = 53;
+          } else if (lari >= 2120) {
+            resultLari = 52;
+          } else if (lari >= 2101) {
+            resultLari = 51;
+          } else if (lari >= 2082) {
+            resultLari = 50;
+          } else if (lari >= 2063) {
+            resultLari = 49;
+          } else if (lari >= 2044) {
+            resultLari = 48;
+          } else if (lari >= 2025) {
+            resultLari = 47;
+          } else if (lari >= 2006) {
+            resultLari = 46;
+          } else if (lari >= 1987) {
+            resultLari = 45;
+          } else if (lari >= 1968) {
+            resultLari = 44;
+          } else if (lari >= 1949) {
+            resultLari = 43;
+          } else if (lari >= 1930) {
+            resultLari = 42;
+          } else if (lari >= 1911) {
+            resultLari = 41;
+          } else if (lari >= 1892) {
+            resultLari = 40;
+          } else if (lari >= 1873) {
+            resultLari = 39;
+          } else if (lari >= 1854) {
+            resultLari = 38;
+          } else if (lari >= 1835) {
+            resultLari = 37;
+          } else if (lari >= 1816) {
+            resultLari = 36;
+          } else if (lari >= 1797) {
+            resultLari = 35;
+          } else if (lari >= 1778) {
+            resultLari = 34;
+          } else if (lari >= 1759) {
+            resultLari = 33;
+          } else if (lari >= 1740) {
+            resultLari = 32;
+          } else if (lari >= 1721) {
+            resultLari = 31;
+          } else if (lari >= 1702) {
+            resultLari = 30;
+          } else if (lari >= 1683) {
+            resultLari = 29;
+          } else if (lari >= 1664) {
+            resultLari = 28;
+          } else if (lari >= 1645) {
+            resultLari = 27;
+          } else if (lari >= 1626) {
+            resultLari = 26;
+          } else if (lari >= 1607) {
+            resultLari = 25;
+          } else if (lari >= 1588) {
+            resultLari = 24;
+          } else if (lari >= 1569) {
+            resultLari = 23;
+          } else if (lari >= 1550) {
+            resultLari = 22;
+          } else if (lari >= 1531) {
+            resultLari = 21;
+          } else if (lari >= 1512) {
+            resultLari = 20;
+          } else if (lari >= 1493) {
+            resultLari = 19;
+          } else if (lari >= 1474) {
+            resultLari = 18;
+          } else if (lari >= 1455) {
+            resultLari = 17;
+          } else if (lari >= 1436) {
+            resultLari = 16;
+          } else if (lari >= 1417) {
+            resultLari = 15;
+          } else if (lari >= 1398) {
+            resultLari = 14;
+          } else if (lari >= 1379) {
+            resultLari = 13;
+          } else if (lari >= 1360) {
+            resultLari = 12;
+          } else if (lari >= 1341) {
+            resultLari = 11;
+          } else if (lari >= 1322) {
+            resultLari = 10;
+          } else if (lari >= 1303) {
+            resultLari = 9;
+          } else if (lari >= 1284) {
+            resultLari = 8;
+          } else if (lari >= 1265) {
+            resultLari = 7;
+          } else if (lari >= 1246) {
+            resultLari = 6;
+          } else if (lari >= 1227) {
+            resultLari = 5;
+          } else if (lari >= 1208) {
+            resultLari = 4;
+          } else if (lari >= 1189) {
+            resultLari = 3;
+          } else if (lari >= 1170) {
+            resultLari = 2;
+          } else if (lari >= 1151) {
+            resultLari = 1;
+          } else if (lari < 1151) {
+            resultLari = 0;
+          }
+          //pull kategori 6 pria
+          if (pullUp < 1) {
+            resultPullUp = 0;
+          } else if (pullUp == 1) {
+            resultPullUp = 40;
+          } else if (pullUp == 2) {
+            resultPullUp = 45;
+          } else if (pullUp == 3) {
+            resultPullUp = 50;
+          } else if (pullUp == 4) {
+            resultPullUp = 55;
+          } else if (pullUp == 5) {
+            resultPullUp = 60;
+          } else if (pullUp == 6) {
+            resultPullUp = 65;
+          } else if (pullUp == 7) {
+            resultPullUp = 70;
+          } else if (pullUp == 8) {
+            resultPullUp = 75;
+          } else if (pullUp == 9) {
+            resultPullUp = 80;
+          } else if (pullUp == 10) {
+            resultPullUp = 85;
+          } else if (pullUp == 11) {
+            resultPullUp = 90;
+          } else if (pullUp == 12) {
+            resultPullUp = 95;
+          } else if (pullUp >= 13) {
+            resultPullUp = 100;
+          }
+          // sit Up kategori 6 pria
+          if (sitUp < 6) {
+            resultSitUp = 0;
+          } else if (sitUp == 6) {
+            resultSitUp = 2;
+          } else if (sitUp == 7) {
+            resultSitUp = 5;
+          } else if (sitUp == 8) {
+            resultSitUp = 8;
+          } else if (sitUp == 9) {
+            resultSitUp = 11;
+          } else if (sitUp == 10) {
+            resultSitUp = 14;
+          } else if (sitUp == 11) {
+            resultSitUp = 17;
+          } else if (sitUp == 12) {
+            resultSitUp = 20;
+          } else if (sitUp == 13) {
+            resultSitUp = 23;
+          } else if (sitUp == 14) {
+            resultSitUp = 26;
+          } else if (sitUp == 15) {
+            resultSitUp = 29;
+          } else if (sitUp == 16) {
+            resultSitUp = 32;
+          } else if (sitUp == 17) {
+            resultSitUp = 35;
+          } else if (sitUp == 18) {
+            resultSitUp = 38;
+          } else if (sitUp == 19) {
+            resultSitUp = 41;
+          } else if (sitUp == 20) {
+            resultSitUp = 44;
+          } else if (sitUp == 21) {
+            resultSitUp = 47;
+          } else if (sitUp == 22) {
+            resultSitUp = 50;
+          } else if (sitUp == 23) {
+            resultSitUp = 53;
+          } else if (sitUp == 24) {
+            resultSitUp = 56;
+          } else if (sitUp == 25) {
+            resultSitUp = 59;
+          } else if (sitUp == 26) {
+            resultSitUp = 62;
+          } else if (sitUp == 27) {
+            resultSitUp = 65;
+          } else if (sitUp == 28) {
+            resultSitUp = 68;
+          } else if (sitUp == 29) {
+            resultSitUp = 71;
+          } else if (sitUp == 30) {
+            resultSitUp = 74;
+          } else if (sitUp == 31) {
+            resultSitUp = 77;
+          } else if (sitUp == 32) {
+            resultSitUp = 80;
+          } else if (sitUp == 33) {
+            resultSitUp = 85;
+          } else if (sitUp == 34) {
+            resultSitUp = 90;
+          } else if (sitUp == 35) {
+            resultSitUp = 95;
+          } else if (sitUp >= 36) {
+            resultSitUp = 100;
+          }
+        } else if (resultKelamin == "pria" && resultUmur == 7) {
+          if (lari >= 2937) {
+            resultLari = 100;
+          } else if (lari >= 2918) {
+            resultLari = 99;
+          } else if (lari >= 2899) {
+            resultLari = 98;
+          } else if (lari >= 2880) {
+            resultLari = 97;
+          } else if (lari >= 2861) {
+            resultLari = 96;
+          } else if (lari >= 2842) {
+            resultLari = 95;
+          } else if (lari >= 2823) {
+            resultLari = 94;
+          } else if (lari >= 2804) {
+            resultLari = 93;
+          } else if (lari >= 2785) {
+            resultLari = 92;
+          } else if (lari >= 2766) {
+            resultLari = 91;
+          } else if (lari >= 2747) {
+            resultLari = 90;
+          } else if (lari >= 2728) {
+            resultLari = 89;
+          } else if (lari >= 2709) {
+            resultLari = 88;
+          } else if (lari >= 2690) {
+            resultLari = 87;
+          } else if (lari >= 2671) {
+            resultLari = 86;
+          } else if (lari >= 2652) {
+            resultLari = 85;
+          } else if (lari >= 2633) {
+            resultLari = 84;
+          } else if (lari >= 2614) {
+            resultLari = 83;
+          } else if (lari >= 2595) {
+            resultLari = 82;
+          } else if (lari >= 2576) {
+            resultLari = 81;
+          } else if (lari >= 2557) {
+            resultLari = 80;
+          } else if (lari >= 2538) {
+            resultLari = 79;
+          } else if (lari >= 2519) {
+            resultLari = 78;
+          } else if (lari >= 2500) {
+            resultLari = 77;
+          } else if (lari >= 2481) {
+            resultLari = 76;
+          } else if (lari >= 2462) {
+            resultLari = 75;
+          } else if (lari >= 2443) {
+            resultLari = 74;
+          } else if (lari >= 2424) {
+            resultLari = 73;
+          } else if (lari >= 2405) {
+            resultLari = 72;
+          } else if (lari >= 2386) {
+            resultLari = 71;
+          } else if (lari >= 2367) {
+            resultLari = 70;
+          } else if (lari >= 2348) {
+            resultLari = 69;
+          } else if (lari >= 2329) {
+            resultLari = 68;
+          } else if (lari >= 2310) {
+            resultLari = 67;
+          } else if (lari >= 2291) {
+            resultLari = 66;
+          } else if (lari >= 2272) {
+            resultLari = 65;
+          } else if (lari >= 2253) {
+            resultLari = 64;
+          } else if (lari >= 2234) {
+            resultLari = 63;
+          } else if (lari >= 2215) {
+            resultLari = 62;
+          } else if (lari >= 2196) {
+            resultLari = 61;
+          } else if (lari >= 2177) {
+            resultLari = 60;
+          } else if (lari >= 2158) {
+            resultLari = 59;
+          } else if (lari >= 2139) {
+            resultLari = 58;
+          } else if (lari >= 2120) {
+            resultLari = 57;
+          } else if (lari >= 2101) {
+            resultLari = 56;
+          } else if (lari >= 2082) {
+            resultLari = 55;
+          } else if (lari >= 2063) {
+            resultLari = 54;
+          } else if (lari >= 2044) {
+            resultLari = 53;
+          } else if (lari >= 2025) {
+            resultLari = 52;
+          } else if (lari >= 2006) {
+            resultLari = 51;
+          } else if (lari >= 1987) {
+            resultLari = 50;
+          } else if (lari >= 1968) {
+            resultLari = 49;
+          } else if (lari >= 1949) {
+            resultLari = 48;
+          } else if (lari >= 1930) {
+            resultLari = 47;
+          } else if (lari >= 1911) {
+            resultLari = 46;
+          } else if (lari >= 1892) {
+            resultLari = 45;
+          } else if (lari >= 1873) {
+            resultLari = 44;
+          } else if (lari >= 1854) {
+            resultLari = 43;
+          } else if (lari >= 1835) {
+            resultLari = 42;
+          } else if (lari >= 1816) {
+            resultLari = 41;
+          } else if (lari >= 1797) {
+            resultLari = 40;
+          } else if (lari >= 1778) {
+            resultLari = 39;
+          } else if (lari >= 1759) {
+            resultLari = 38;
+          } else if (lari >= 1740) {
+            resultLari = 37;
+          } else if (lari >= 1721) {
+            resultLari = 36;
+          } else if (lari >= 1702) {
+            resultLari = 35;
+          } else if (lari >= 1683) {
+            resultLari = 34;
+          } else if (lari >= 1664) {
+            resultLari = 33;
+          } else if (lari >= 1645) {
+            resultLari = 32;
+          } else if (lari >= 1626) {
+            resultLari = 31;
+          } else if (lari >= 1607) {
+            resultLari = 30;
+          } else if (lari >= 1588) {
+            resultLari = 29;
+          } else if (lari >= 1569) {
+            resultLari = 28;
+          } else if (lari >= 1550) {
+            resultLari = 27;
+          } else if (lari >= 1531) {
+            resultLari = 26;
+          } else if (lari >= 1512) {
+            resultLari = 25;
+          } else if (lari >= 1493) {
+            resultLari = 24;
+          } else if (lari >= 1474) {
+            resultLari = 23;
+          } else if (lari >= 1455) {
+            resultLari = 22;
+          } else if (lari >= 1436) {
+            resultLari = 21;
+          } else if (lari >= 1417) {
+            resultLari = 20;
+          } else if (lari >= 1398) {
+            resultLari = 19;
+          } else if (lari >= 1379) {
+            resultLari = 18;
+          } else if (lari >= 1360) {
+            resultLari = 17;
+          } else if (lari >= 1341) {
+            resultLari = 16;
+          } else if (lari >= 1322) {
+            resultLari = 15;
+          } else if (lari >= 1303) {
+            resultLari = 14;
+          } else if (lari >= 1284) {
+            resultLari = 13;
+          } else if (lari >= 1265) {
+            resultLari = 12;
+          } else if (lari >= 1246) {
+            resultLari = 11;
+          } else if (lari >= 1227) {
+            resultLari = 10;
+          } else if (lari >= 1208) {
+            resultLari = 9;
+          } else if (lari >= 1189) {
+            resultLari = 8;
+          } else if (lari >= 1170) {
+            resultLari = 7;
+          } else if (lari >= 1151) {
+            resultLari = 6;
+          } else if (lari >= 1132) {
+            resultLari = 5;
+          } else if (lari >= 1113) {
+            resultLari = 4;
+          } else if (lari >= 1094) {
+            resultLari = 3;
+          } else if (lari >= 1075) {
+            resultLari = 2;
+          } else if (lari >= 1056) {
+            resultLari = 1;
+          } else if (lari < 1056) {
+            resultLari = 0;
+          }
+          //pull kategori 7 pria
+          if (pullUp < 1) {
+            resultPullUp = 0;
+          } else if (pullUp == 1) {
+            resultPullUp = 45;
+          } else if (pullUp == 2) {
+            resultPullUp = 50;
+          } else if (pullUp == 3) {
+            resultPullUp = 55;
+          } else if (pullUp == 4) {
+            resultPullUp = 60;
+          } else if (pullUp == 5) {
+            resultPullUp = 65;
+          } else if (pullUp == 6) {
+            resultPullUp = 70;
+          } else if (pullUp == 7) {
+            resultPullUp = 75;
+          } else if (pullUp == 8) {
+            resultPullUp = 80;
+          } else if (pullUp == 9) {
+            resultPullUp = 85;
+          } else if (pullUp == 10) {
+            resultPullUp = 90;
+          } else if (pullUp == 11) {
+            resultPullUp = 95;
+          } else if (pullUp >= 12) {
+            resultPullUp = 100;
+          }
+          // sit Up kategori 7 pria
+          if (sitUp < 4) {
+            resultSitUp = 0;
+          } else if (sitUp == 4) {
+            resultSitUp = 1;
+          } else if (sitUp == 5) {
+            resultSitUp = 4;
+          } else if (sitUp == 6) {
+            resultSitUp = 7;
+          } else if (sitUp == 7) {
+            resultSitUp = 10;
+          } else if (sitUp == 8) {
+            resultSitUp = 13;
+          } else if (sitUp == 9) {
+            resultSitUp = 16;
+          } else if (sitUp == 10) {
+            resultSitUp = 19;
+          } else if (sitUp == 11) {
+            resultSitUp = 22;
+          } else if (sitUp == 12) {
+            resultSitUp = 25;
+          } else if (sitUp == 13) {
+            resultSitUp = 28;
+          } else if (sitUp == 14) {
+            resultSitUp = 31;
+          } else if (sitUp == 15) {
+            resultSitUp = 34;
+          } else if (sitUp == 16) {
+            resultSitUp = 37;
+          } else if (sitUp == 17) {
+            resultSitUp = 40;
+          } else if (sitUp == 18) {
+            resultSitUp = 43;
+          } else if (sitUp == 19) {
+            resultSitUp = 46;
+          } else if (sitUp == 20) {
+            resultSitUp = 49;
+          } else if (sitUp == 21) {
+            resultSitUp = 52;
+          } else if (sitUp == 22) {
+            resultSitUp = 55;
+          } else if (sitUp == 23) {
+            resultSitUp = 58;
+          } else if (sitUp == 24) {
+            resultSitUp = 61;
+          } else if (sitUp == 25) {
+            resultSitUp = 64;
+          } else if (sitUp == 26) {
+            resultSitUp = 67;
+          } else if (sitUp == 27) {
+            resultSitUp = 70;
+          } else if (sitUp == 28) {
+            resultSitUp = 73;
+          } else if (sitUp == 29) {
+            resultSitUp = 76;
+          } else if (sitUp == 30) {
+            resultSitUp = 79;
+          } else if (sitUp == 31) {
+            resultSitUp = 82;
+          } else if (sitUp == 32) {
+            resultSitUp = 85;
+          } else if (sitUp == 33) {
+            resultSitUp = 90;
+          } else if (sitUp == 34) {
+            resultSitUp = 95;
+          } else if (sitUp >= 35) {
+            resultSitUp = 100;
+          }
+        } else if (resultKelamin == "pria" && resultUmur == 8) {
+          if (lari >= 2842) {
+            resultLari = 100;
+          } else if (lari >= 2823) {
+            resultLari = 99;
+          } else if (lari >= 2804) {
+            resultLari = 98;
+          } else if (lari >= 2785) {
+            resultLari = 97;
+          } else if (lari >= 2766) {
+            resultLari = 96;
+          } else if (lari >= 2747) {
+            resultLari = 95;
+          } else if (lari >= 2728) {
+            resultLari = 94;
+          } else if (lari >= 2709) {
+            resultLari = 93;
+          } else if (lari >= 2690) {
+            resultLari = 92;
+          } else if (lari >= 2671) {
+            resultLari = 91;
+          } else if (lari >= 2652) {
+            resultLari = 90;
+          } else if (lari >= 2633) {
+            resultLari = 89;
+          } else if (lari >= 2614) {
+            resultLari = 88;
+          } else if (lari >= 2595) {
+            resultLari = 87;
+          } else if (lari >= 2576) {
+            resultLari = 86;
+          } else if (lari >= 2557) {
+            resultLari = 85;
+          } else if (lari >= 2538) {
+            resultLari = 84;
+          } else if (lari >= 2519) {
+            resultLari = 83;
+          } else if (lari >= 2500) {
+            resultLari = 82;
+          } else if (lari >= 2481) {
+            resultLari = 81;
+          } else if (lari >= 2462) {
+            resultLari = 80;
+          } else if (lari >= 2443) {
+            resultLari = 79;
+          } else if (lari >= 2424) {
+            resultLari = 78;
+          } else if (lari >= 2405) {
+            resultLari = 77;
+          } else if (lari >= 2386) {
+            resultLari = 76;
+          } else if (lari >= 2367) {
+            resultLari = 75;
+          } else if (lari >= 2348) {
+            resultLari = 74;
+          } else if (lari >= 2329) {
+            resultLari = 73;
+          } else if (lari >= 2310) {
+            resultLari = 72;
+          } else if (lari >= 2291) {
+            resultLari = 71;
+          } else if (lari >= 2272) {
+            resultLari = 70;
+          } else if (lari >= 2253) {
+            resultLari = 69;
+          } else if (lari >= 2234) {
+            resultLari = 68;
+          } else if (lari >= 2215) {
+            resultLari = 67;
+          } else if (lari >= 2196) {
+            resultLari = 66;
+          } else if (lari >= 2177) {
+            resultLari = 65;
+          } else if (lari >= 2158) {
+            resultLari = 64;
+          } else if (lari >= 2139) {
+            resultLari = 63;
+          } else if (lari >= 2120) {
+            resultLari = 62;
+          } else if (lari >= 2101) {
+            resultLari = 61;
+          } else if (lari >= 2082) {
+            resultLari = 60;
+          } else if (lari >= 2063) {
+            resultLari = 59;
+          } else if (lari >= 2044) {
+            resultLari = 58;
+          } else if (lari >= 2025) {
+            resultLari = 57;
+          } else if (lari >= 2006) {
+            resultLari = 56;
+          } else if (lari >= 1987) {
+            resultLari = 55;
+          } else if (lari >= 1968) {
+            resultLari = 54;
+          } else if (lari >= 1949) {
+            resultLari = 53;
+          } else if (lari >= 1930) {
+            resultLari = 52;
+          } else if (lari >= 1911) {
+            resultLari = 51;
+          } else if (lari >= 1892) {
+            resultLari = 50;
+          } else if (lari >= 1873) {
+            resultLari = 49;
+          } else if (lari >= 1854) {
+            resultLari = 48;
+          } else if (lari >= 1835) {
+            resultLari = 47;
+          } else if (lari >= 1816) {
+            resultLari = 46;
+          } else if (lari >= 1797) {
+            resultLari = 45;
+          } else if (lari >= 1778) {
+            resultLari = 44;
+          } else if (lari >= 1759) {
+            resultLari = 43;
+          } else if (lari >= 1740) {
+            resultLari = 42;
+          } else if (lari >= 1721) {
+            resultLari = 41;
+          } else if (lari >= 1702) {
+            resultLari = 40;
+          } else if (lari >= 1683) {
+            resultLari = 39;
+          } else if (lari >= 1664) {
+            resultLari = 38;
+          } else if (lari >= 1645) {
+            resultLari = 37;
+          } else if (lari >= 1626) {
+            resultLari = 36;
+          } else if (lari >= 1607) {
+            resultLari = 35;
+          } else if (lari >= 1588) {
+            resultLari = 34;
+          } else if (lari >= 1569) {
+            resultLari = 33;
+          } else if (lari >= 1550) {
+            resultLari = 32;
+          } else if (lari >= 1531) {
+            resultLari = 31;
+          } else if (lari >= 1512) {
+            resultLari = 30;
+          } else if (lari >= 1493) {
+            resultLari = 29;
+          } else if (lari >= 1474) {
+            resultLari = 28;
+          } else if (lari >= 1455) {
+            resultLari = 27;
+          } else if (lari >= 1436) {
+            resultLari = 26;
+          } else if (lari >= 1417) {
+            resultLari = 25;
+          } else if (lari >= 1398) {
+            resultLari = 24;
+          } else if (lari >= 1379) {
+            resultLari = 23;
+          } else if (lari >= 1360) {
+            resultLari = 22;
+          } else if (lari >= 1341) {
+            resultLari = 21;
+          } else if (lari >= 1322) {
+            resultLari = 20;
+          } else if (lari >= 1303) {
+            resultLari = 19;
+          } else if (lari >= 1284) {
+            resultLari = 18;
+          } else if (lari >= 1265) {
+            resultLari = 17;
+          } else if (lari >= 1246) {
+            resultLari = 16;
+          } else if (lari >= 1227) {
+            resultLari = 15;
+          } else if (lari >= 1208) {
+            resultLari = 14;
+          } else if (lari >= 1189) {
+            resultLari = 13;
+          } else if (lari >= 1170) {
+            resultLari = 12;
+          } else if (lari >= 1151) {
+            resultLari = 11;
+          } else if (lari >= 1132) {
+            resultLari = 10;
+          } else if (lari >= 1113) {
+            resultLari = 9;
+          } else if (lari >= 1094) {
+            resultLari = 8;
+          } else if (lari >= 1075) {
+            resultLari = 7;
+          } else if (lari >= 1056) {
+            resultLari = 6;
+          } else if (lari >= 1037) {
+            resultLari = 5;
+          } else if (lari >= 1018) {
+            resultLari = 4;
+          } else if (lari >= 999) {
+            resultLari = 3;
+          } else if (lari >= 980) {
+            resultLari = 2;
+          } else if (lari >= 961) {
+            resultLari = 1;
+          } else if (lari < 961) {
+            resultLari = 0;
+          }
+          //pull kategori 8 pria
+          if (pullUp < 1) {
+            resultPullUp = 0;
+          } else if (pullUp == 1) {
+            resultPullUp = 50;
+          } else if (pullUp == 2) {
+            resultPullUp = 55;
+          } else if (pullUp == 3) {
+            resultPullUp = 60;
+          } else if (pullUp == 4) {
+            resultPullUp = 65;
+          } else if (pullUp == 5) {
+            resultPullUp = 70;
+          } else if (pullUp == 6) {
+            resultPullUp = 75;
+          } else if (pullUp == 7) {
+            resultPullUp = 80;
+          } else if (pullUp == 8) {
+            resultPullUp = 85;
+          } else if (pullUp == 9) {
+            resultPullUp = 90;
+          } else if (pullUp == 10) {
+            resultPullUp = 95;
+          } else if (pullUp >= 11) {
+            resultPullUp = 100;
+          }
+          // sit Up kategori 8 pria
+          if (sitUp < 3) {
+            resultSitUp = 0;
+          } else if (sitUp == 3) {
+            resultSitUp = 3;
+          } else if (sitUp == 4) {
+            resultSitUp = 6;
+          } else if (sitUp == 5) {
+            resultSitUp = 9;
+          } else if (sitUp == 6) {
+            resultSitUp = 12;
+          } else if (sitUp == 7) {
+            resultSitUp = 15;
+          } else if (sitUp == 8) {
+            resultSitUp = 18;
+          } else if (sitUp == 9) {
+            resultSitUp = 21;
+          } else if (sitUp == 10) {
+            resultSitUp = 24;
+          } else if (sitUp == 11) {
+            resultSitUp = 27;
+          } else if (sitUp == 12) {
+            resultSitUp = 30;
+          } else if (sitUp == 13) {
+            resultSitUp = 33;
+          } else if (sitUp == 14) {
+            resultSitUp = 36;
+          } else if (sitUp == 15) {
+            resultSitUp = 39;
+          } else if (sitUp == 16) {
+            resultSitUp = 42;
+          } else if (sitUp == 17) {
+            resultSitUp = 45;
+          } else if (sitUp == 18) {
+            resultSitUp = 48;
+          } else if (sitUp == 19) {
+            resultSitUp = 51;
+          } else if (sitUp == 20) {
+            resultSitUp = 54;
+          } else if (sitUp == 21) {
+            resultSitUp = 57;
+          } else if (sitUp == 22) {
+            resultSitUp = 60;
+          } else if (sitUp == 23) {
+            resultSitUp = 63;
+          } else if (sitUp == 24) {
+            resultSitUp = 66;
+          } else if (sitUp == 25) {
+            resultSitUp = 69;
+          } else if (sitUp == 26) {
+            resultSitUp = 72;
+          } else if (sitUp == 27) {
+            resultSitUp = 75;
+          } else if (sitUp == 28) {
+            resultSitUp = 78;
+          } else if (sitUp == 29) {
+            resultSitUp = 81;
+          } else if (sitUp == 30) {
+            resultSitUp = 84;
+          } else if (sitUp == 31) {
+            resultSitUp = 87;
+          } else if (sitUp == 32) {
+            resultSitUp = 90;
+          } else if (sitUp == 33) {
+            resultSitUp = 95;
+          } else if (sitUp >= 34) {
+            resultSitUp = 100;
+          }
+        } else if (resultKelamin == "pria" && resultUmur == 9) {
+          if (lari >= 2747) {
+            resultLari = 100;
+          } else if (lari >= 2728) {
+            resultLari = 99;
+          } else if (lari >= 2709) {
+            resultLari = 98;
+          } else if (lari >= 2690) {
+            resultLari = 97;
+          } else if (lari >= 2671) {
+            resultLari = 96;
+          } else if (lari >= 2652) {
+            resultLari = 95;
+          } else if (lari >= 2633) {
+            resultLari = 94;
+          } else if (lari >= 2614) {
+            resultLari = 93;
+          } else if (lari >= 2595) {
+            resultLari = 92;
+          } else if (lari >= 2576) {
+            resultLari = 91;
+          } else if (lari >= 2557) {
+            resultLari = 90;
+          } else if (lari >= 2538) {
+            resultLari = 89;
+          } else if (lari >= 2519) {
+            resultLari = 88;
+          } else if (lari >= 2500) {
+            resultLari = 87;
+          } else if (lari >= 2481) {
+            resultLari = 86;
+          } else if (lari >= 2462) {
+            resultLari = 85;
+          } else if (lari >= 2443) {
+            resultLari = 84;
+          } else if (lari >= 2424) {
+            resultLari = 83;
+          } else if (lari >= 2405) {
+            resultLari = 82;
+          } else if (lari >= 2386) {
+            resultLari = 81;
+          } else if (lari >= 2367) {
+            resultLari = 80;
+          } else if (lari >= 2348) {
+            resultLari = 79;
+          } else if (lari >= 2329) {
+            resultLari = 78;
+          } else if (lari >= 2310) {
+            resultLari = 77;
+          } else if (lari >= 2291) {
+            resultLari = 76;
+          } else if (lari >= 2272) {
+            resultLari = 75;
+          } else if (lari >= 2253) {
+            resultLari = 74;
+          } else if (lari >= 2234) {
+            resultLari = 73;
+          } else if (lari >= 2215) {
+            resultLari = 72;
+          } else if (lari >= 2196) {
+            resultLari = 71;
+          } else if (lari >= 2177) {
+            resultLari = 70;
+          } else if (lari >= 2158) {
+            resultLari = 69;
+          } else if (lari >= 2139) {
+            resultLari = 68;
+          } else if (lari >= 2120) {
+            resultLari = 67;
+          } else if (lari >= 2101) {
+            resultLari = 66;
+          } else if (lari >= 2082) {
+            resultLari = 65;
+          } else if (lari >= 2063) {
+            resultLari = 64;
+          } else if (lari >= 2044) {
+            resultLari = 63;
+          } else if (lari >= 2025) {
+            resultLari = 62;
+          } else if (lari >= 2006) {
+            resultLari = 61;
+          } else if (lari >= 1987) {
+            resultLari = 60;
+          } else if (lari >= 1968) {
+            resultLari = 59;
+          } else if (lari >= 1949) {
+            resultLari = 58;
+          } else if (lari >= 1930) {
+            resultLari = 57;
+          } else if (lari >= 1911) {
+            resultLari = 56;
+          } else if (lari >= 1892) {
+            resultLari = 55;
+          } else if (lari >= 1873) {
+            resultLari = 54;
+          } else if (lari >= 1854) {
+            resultLari = 53;
+          } else if (lari >= 1835) {
+            resultLari = 52;
+          } else if (lari >= 1816) {
+            resultLari = 51;
+          } else if (lari >= 1797) {
+            resultLari = 50;
+          } else if (lari >= 1778) {
+            resultLari = 49;
+          } else if (lari >= 1759) {
+            resultLari = 48;
+          } else if (lari >= 1740) {
+            resultLari = 47;
+          } else if (lari >= 1721) {
+            resultLari = 46;
+          } else if (lari >= 1702) {
+            resultLari = 45;
+          } else if (lari >= 1683) {
+            resultLari = 44;
+          } else if (lari >= 1664) {
+            resultLari = 43;
+          } else if (lari >= 1645) {
+            resultLari = 42;
+          } else if (lari >= 1626) {
+            resultLari = 41;
+          } else if (lari >= 1607) {
+            resultLari = 40;
+          } else if (lari >= 1588) {
+            resultLari = 39;
+          } else if (lari >= 1569) {
+            resultLari = 38;
+          } else if (lari >= 1550) {
+            resultLari = 37;
+          } else if (lari >= 1531) {
+            resultLari = 36;
+          } else if (lari >= 1512) {
+            resultLari = 35;
+          } else if (lari >= 1493) {
+            resultLari = 34;
+          } else if (lari >= 1474) {
+            resultLari = 33;
+          } else if (lari >= 1455) {
+            resultLari = 32;
+          } else if (lari >= 1436) {
+            resultLari = 31;
+          } else if (lari >= 1417) {
+            resultLari = 30;
+          } else if (lari >= 1398) {
+            resultLari = 29;
+          } else if (lari >= 1379) {
+            resultLari = 28;
+          } else if (lari >= 1360) {
+            resultLari = 27;
+          } else if (lari >= 1341) {
+            resultLari = 26;
+          } else if (lari >= 1322) {
+            resultLari = 25;
+          } else if (lari >= 1303) {
+            resultLari = 24;
+          } else if (lari >= 1284) {
+            resultLari = 23;
+          } else if (lari >= 1265) {
+            resultLari = 22;
+          } else if (lari >= 1246) {
+            resultLari = 21;
+          } else if (lari >= 1227) {
+            resultLari = 20;
+          } else if (lari >= 1208) {
+            resultLari = 19;
+          } else if (lari >= 1189) {
+            resultLari = 18;
+          } else if (lari >= 1170) {
+            resultLari = 17;
+          } else if (lari >= 1151) {
+            resultLari = 16;
+          } else if (lari >= 1132) {
+            resultLari = 15;
+          } else if (lari >= 1113) {
+            resultLari = 14;
+          } else if (lari >= 1094) {
+            resultLari = 13;
+          } else if (lari >= 1075) {
+            resultLari = 12;
+          } else if (lari >= 1056) {
+            resultLari = 11;
+          } else if (lari >= 1037) {
+            resultLari = 10;
+          } else if (lari >= 1018) {
+            resultLari = 9;
+          } else if (lari >= 999) {
+            resultLari = 8;
+          } else if (lari >= 980) {
+            resultLari = 7;
+          } else if (lari >= 961) {
+            resultLari = 6;
+          } else if (lari >= 942) {
+            resultLari = 5;
+          } else if (lari >= 923) {
+            resultLari = 4;
+          } else if (lari >= 904) {
+            resultLari = 3;
+          } else if (lari >= 885) {
+            resultLari = 2;
+          } else if (lari >= 866) {
+            resultLari = 1;
+          } else if (lari < 961) {
+            resultLari = 0;
+          }
+          //pull kategori 9 pria
+          if (pullUp < 1) {
+            resultPullUp = 0;
+          } else if (pullUp == 1) {
+            resultPullUp = 55;
+          } else if (pullUp == 2) {
+            resultPullUp = 60;
+          } else if (pullUp == 3) {
+            resultPullUp = 65;
+          } else if (pullUp == 4) {
+            resultPullUp = 70;
+          } else if (pullUp == 5) {
+            resultPullUp = 75;
+          } else if (pullUp == 6) {
+            resultPullUp = 80;
+          } else if (pullUp == 7) {
+            resultPullUp = 85;
+          } else if (pullUp == 8) {
+            resultPullUp = 90;
+          } else if (pullUp == 9) {
+            resultPullUp = 95;
+          } else if (pullUp >= 10) {
+            resultPullUp = 100;
+          }
+          // sit Up kategori 9 pria
+          if (sitUp < 1) {
+            resultSitUp = 0;
+          } else if (sitUp == 1) {
+            resultSitUp = 2;
+          } else if (sitUp == 2) {
+            resultSitUp = 5;
+          } else if (sitUp == 3) {
+            resultSitUp = 8;
+          } else if (sitUp == 4) {
+            resultSitUp = 11;
+          } else if (sitUp == 5) {
+            resultSitUp = 14;
+          } else if (sitUp == 6) {
+            resultSitUp = 17;
+          } else if (sitUp == 7) {
+            resultSitUp = 20;
+          } else if (sitUp == 8) {
+            resultSitUp = 23;
+          } else if (sitUp == 9) {
+            resultSitUp = 26;
+          } else if (sitUp == 10) {
+            resultSitUp = 29;
+          } else if (sitUp == 11) {
+            resultSitUp = 32;
+          } else if (sitUp == 12) {
+            resultSitUp = 35;
+          } else if (sitUp == 13) {
+            resultSitUp = 38;
+          } else if (sitUp == 14) {
+            resultSitUp = 41;
+          } else if (sitUp == 15) {
+            resultSitUp = 44;
+          } else if (sitUp == 16) {
+            resultSitUp = 47;
+          } else if (sitUp == 17) {
+            resultSitUp = 50;
+          } else if (sitUp == 18) {
+            resultSitUp = 53;
+          } else if (sitUp == 19) {
+            resultSitUp = 56;
+          } else if (sitUp == 20) {
+            resultSitUp = 59;
+          } else if (sitUp == 21) {
+            resultSitUp = 62;
+          } else if (sitUp == 22) {
+            resultSitUp = 65;
+          } else if (sitUp == 23) {
+            resultSitUp = 68;
+          } else if (sitUp == 24) {
+            resultSitUp = 71;
+          } else if (sitUp == 25) {
+            resultSitUp = 74;
+          } else if (sitUp == 26) {
+            resultSitUp = 77;
+          } else if (sitUp == 27) {
+            resultSitUp = 80;
+          } else if (sitUp == 28) {
+            resultSitUp = 83;
+          } else if (sitUp == 29) {
+            resultSitUp = 86;
+          } else if (sitUp == 30) {
+            resultSitUp = 89;
+          } else if (sitUp == 31) {
+            resultSitUp = 92;
+          } else if (sitUp == 32) {
+            resultSitUp = 95;
+          } else if (sitUp >= 33) {
+            resultSitUp = 100;
+          }
+        } else if (resultKelamin == "pria" && resultUmur == 10) {
+          if (lari >= 2652) {
+            resultLari = 100;
+          } else if (lari >= 2633) {
+            resultLari = 99;
+          } else if (lari >= 2614) {
+            resultLari = 98;
+          } else if (lari >= 2595) {
+            resultLari = 97;
+          } else if (lari >= 2576) {
+            resultLari = 96;
+          } else if (lari >= 2557) {
+            resultLari = 95;
+          } else if (lari >= 2538) {
+            resultLari = 94;
+          } else if (lari >= 2519) {
+            resultLari = 93;
+          } else if (lari >= 2500) {
+            resultLari = 92;
+          } else if (lari >= 2481) {
+            resultLari = 91;
+          } else if (lari >= 2462) {
+            resultLari = 90;
+          } else if (lari >= 2443) {
+            resultLari = 89;
+          } else if (lari >= 2424) {
+            resultLari = 88;
+          } else if (lari >= 2405) {
+            resultLari = 87;
+          } else if (lari >= 2386) {
+            resultLari = 86;
+          } else if (lari >= 2367) {
+            resultLari = 85;
+          } else if (lari >= 2348) {
+            resultLari = 84;
+          } else if (lari >= 2329) {
+            resultLari = 83;
+          } else if (lari >= 2310) {
+            resultLari = 82;
+          } else if (lari >= 2291) {
+            resultLari = 81;
+          } else if (lari >= 2272) {
+            resultLari = 80;
+          } else if (lari >= 2253) {
+            resultLari = 79;
+          } else if (lari >= 2234) {
+            resultLari = 78;
+          } else if (lari >= 2215) {
+            resultLari = 77;
+          } else if (lari >= 2196) {
+            resultLari = 76;
+          } else if (lari >= 2177) {
+            resultLari = 75;
+          } else if (lari >= 2158) {
+            resultLari = 74;
+          } else if (lari >= 2139) {
+            resultLari = 73;
+          } else if (lari >= 2120) {
+            resultLari = 72;
+          } else if (lari >= 2101) {
+            resultLari = 71;
+          } else if (lari >= 2082) {
+            resultLari = 70;
+          } else if (lari >= 2063) {
+            resultLari = 69;
+          } else if (lari >= 2044) {
+            resultLari = 68;
+          } else if (lari >= 2025) {
+            resultLari = 67;
+          } else if (lari >= 2006) {
+            resultLari = 66;
+          } else if (lari >= 1987) {
+            resultLari = 65;
+          } else if (lari >= 1968) {
+            resultLari = 64;
+          } else if (lari >= 1949) {
+            resultLari = 63;
+          } else if (lari >= 1930) {
+            resultLari = 62;
+          } else if (lari >= 1911) {
+            resultLari = 61;
+          } else if (lari >= 1892) {
+            resultLari = 60;
+          } else if (lari >= 1873) {
+            resultLari = 59;
+          } else if (lari >= 1854) {
+            resultLari = 58;
+          } else if (lari >= 1835) {
+            resultLari = 57;
+          } else if (lari >= 1816) {
+            resultLari = 56;
+          } else if (lari >= 1797) {
+            resultLari = 55;
+          } else if (lari >= 1778) {
+            resultLari = 54;
+          } else if (lari >= 1759) {
+            resultLari = 53;
+          } else if (lari >= 1740) {
+            resultLari = 52;
+          } else if (lari >= 1721) {
+            resultLari = 51;
+          } else if (lari >= 1702) {
+            resultLari = 50;
+          } else if (lari >= 1683) {
+            resultLari = 49;
+          } else if (lari >= 1664) {
+            resultLari = 48;
+          } else if (lari >= 1645) {
+            resultLari = 47;
+          } else if (lari >= 1626) {
+            resultLari = 46;
+          } else if (lari >= 1607) {
+            resultLari = 45;
+          } else if (lari >= 1588) {
+            resultLari = 44;
+          } else if (lari >= 1569) {
+            resultLari = 43;
+          } else if (lari >= 1550) {
+            resultLari = 42;
+          } else if (lari >= 1531) {
+            resultLari = 41;
+          } else if (lari >= 1512) {
+            resultLari = 40;
+          } else if (lari >= 1493) {
+            resultLari = 39;
+          } else if (lari >= 1474) {
+            resultLari = 38;
+          } else if (lari >= 1455) {
+            resultLari = 37;
+          } else if (lari >= 1436) {
+            resultLari = 36;
+          } else if (lari >= 1417) {
+            resultLari = 35;
+          } else if (lari >= 1398) {
+            resultLari = 34;
+          } else if (lari >= 1379) {
+            resultLari = 33;
+          } else if (lari >= 1360) {
+            resultLari = 32;
+          } else if (lari >= 1341) {
+            resultLari = 31;
+          } else if (lari >= 1322) {
+            resultLari = 30;
+          } else if (lari >= 1303) {
+            resultLari = 29;
+          } else if (lari >= 1284) {
+            resultLari = 28;
+          } else if (lari >= 1265) {
+            resultLari = 27;
+          } else if (lari >= 1246) {
+            resultLari = 26;
+          } else if (lari >= 1227) {
+            resultLari = 25;
+          } else if (lari >= 1208) {
+            resultLari = 24;
+          } else if (lari >= 1189) {
+            resultLari = 23;
+          } else if (lari >= 1170) {
+            resultLari = 22;
+          } else if (lari >= 1151) {
+            resultLari = 21;
+          } else if (lari >= 1132) {
+            resultLari = 20;
+          } else if (lari >= 1113) {
+            resultLari = 19;
+          } else if (lari >= 1094) {
+            resultLari = 18;
+          } else if (lari >= 1075) {
+            resultLari = 17;
+          } else if (lari >= 1056) {
+            resultLari = 16;
+          } else if (lari >= 1037) {
+            resultLari = 15;
+          } else if (lari >= 1018) {
+            resultLari = 14;
+          } else if (lari >= 999) {
+            resultLari = 13;
+          } else if (lari >= 980) {
+            resultLari = 12;
+          } else if (lari >= 961) {
+            resultLari = 11;
+          } else if (lari >= 942) {
+            resultLari = 10;
+          } else if (lari >= 923) {
+            resultLari = 9;
+          } else if (lari >= 904) {
+            resultLari = 8;
+          } else if (lari >= 885) {
+            resultLari = 7;
+          } else if (lari >= 866) {
+            resultLari = 6;
+          } else if (lari >= 847) {
+            resultLari = 5;
+          } else if (lari >= 828) {
+            resultLari = 4;
+          } else if (lari >= 809) {
+            resultLari = 3;
+          } else if (lari >= 790) {
+            resultLari = 2;
+          } else if (lari >= 771) {
+            resultLari = 1;
+          } else if (lari < 771) {
+            resultLari = 0;
+          }
+          //pull kategori 10 pria
+          if (pullUp < 1) {
+            resultPullUp = 0;
+          } else if (pullUp == 1) {
+            resultPullUp = 60;
+          } else if (pullUp == 2) {
+            resultPullUp = 65;
+          } else if (pullUp == 3) {
+            resultPullUp = 70;
+          } else if (pullUp == 4) {
+            resultPullUp = 75;
+          } else if (pullUp == 5) {
+            resultPullUp = 80;
+          } else if (pullUp == 6) {
+            resultPullUp = 85;
+          } else if (pullUp == 7) {
+            resultPullUp = 90;
+          } else if (pullUp == 8) {
+            resultPullUp = 95;
+          } else if (pullUp >= 9) {
+            resultPullUp = 100;
+          }
+          // sit Up kategori 10 pria
+          if (sitUp < 1) {
+            resultSitUp = 0;
+          } else if (sitUp == 1) {
+            resultSitUp = 7;
+          } else if (sitUp == 2) {
+            resultSitUp = 10;
+          } else if (sitUp == 3) {
+            resultSitUp = 13;
+          } else if (sitUp == 4) {
+            resultSitUp = 16;
+          } else if (sitUp == 5) {
+            resultSitUp = 19;
+          } else if (sitUp == 6) {
+            resultSitUp = 22;
+          } else if (sitUp == 7) {
+            resultSitUp = 25;
+          } else if (sitUp == 8) {
+            resultSitUp = 28;
+          } else if (sitUp == 9) {
+            resultSitUp = 31;
+          } else if (sitUp == 10) {
+            resultSitUp = 34;
+          } else if (sitUp == 11) {
+            resultSitUp = 37;
+          } else if (sitUp == 12) {
+            resultSitUp = 40;
+          } else if (sitUp == 13) {
+            resultSitUp = 43;
+          } else if (sitUp == 14) {
+            resultSitUp = 46;
+          } else if (sitUp == 15) {
+            resultSitUp = 49;
+          } else if (sitUp == 16) {
+            resultSitUp = 52;
+          } else if (sitUp == 17) {
+            resultSitUp = 55;
+          } else if (sitUp == 18) {
+            resultSitUp = 58;
+          } else if (sitUp == 19) {
+            resultSitUp = 61;
+          } else if (sitUp == 20) {
+            resultSitUp = 64;
+          } else if (sitUp == 21) {
+            resultSitUp = 67;
+          } else if (sitUp == 22) {
+            resultSitUp = 70;
+          } else if (sitUp == 23) {
+            resultSitUp = 73;
+          } else if (sitUp == 24) {
+            resultSitUp = 76;
+          } else if (sitUp == 25) {
+            resultSitUp = 79;
+          } else if (sitUp == 26) {
+            resultSitUp = 82;
+          } else if (sitUp == 27) {
+            resultSitUp = 85;
+          } else if (sitUp == 28) {
+            resultSitUp = 88;
+          } else if (sitUp == 29) {
+            resultSitUp = 91;
+          } else if (sitUp == 30) {
+            resultSitUp = 94;
+          } else if (sitUp == 31) {
+            resultSitUp = 97;
+          } else if (sitUp >= 32) {
+            resultSitUp = 100;
+          }
+        }
+        //lari wanita
+        else if (resultKelamin == "wanita" && resultUmur == 1) {
+          console.log(resultKelamin);
+          console.log(resultUmur);
         }
 
         // CREATE InnerHTML untuk hasil
@@ -359,7 +3159,9 @@
         let hasil = document.querySelector(".hasil");
         hasil.innerHTML = `\nkelamin = ${resultKelamin},
         kategori = ${resultUmur},
-        nilai lari = ${resultLari}
+        nilai lari = ${resultLari},
+        nilai pull-up = ${resultPullUp}
+        nilai sit-up = ${resultSitUp}
         `;
       });
     </script>
