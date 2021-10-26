@@ -13,8 +13,9 @@
       }
       #umur {
         margin-left: 11em;
-        margin-bottom: 1em;
         margin-top: 1em;
+      }
+      .score-umur {
       }
       .jk {
         margin-right: 9em;
@@ -34,6 +35,18 @@
         margin-top: 1em;
         margin-left: 6.8em;
       }
+      #push-up {
+        margin-top: 1em;
+        margin-left: 5.8em;
+      }
+      #lunges {
+        margin-top: 1em;
+        margin-left: 6.4em;
+      }
+      #shuttle-run {
+        margin-top: 1em;
+        margin-left: 4.2em;
+      }
       button {
         margin: 1em auto;
         margin-left: 19em;
@@ -46,7 +59,10 @@
       >Wanita</label
     ><br />
 
-    <label for="umur">Masukan umur:</label><input type="text" id="umur" size="5" /><br />
+    <label for="umur">Masukan umur:</label><input type="text" id="umur" size="5" />
+    <div class="score-umur">kategori = 0</div>
+
+    <br />
     <label for="lari">Jarak Lari 12 Menit (dalam meter) : </label>
 
     <input type="text" id="lari" size="5" />
@@ -54,6 +70,12 @@
     <br /><label for="pull-up">Pull Up (dalam 1 menit):</label><input type="text" id="pull-up" size="5" />
 
     <br /><label for="sit-up">Sit Up (dalam 1 menit) :</label><input type="text" id="sit-up" size="5" />
+
+    <br /><label for="push-up">Push Up (dalam 1 menit) :</label><input type="text" id="push-up" size="5" />
+
+    <br /><label for="lunges">Lunges (dalam 1 menit) :</label><input type="text" id="lunges" size="5" />
+
+    <br /><label for="shuttle-run">Shuttle Run (dalam 1 menit) :</label><input type="text" id="shuttle-run" size="5" /> <br />
 
     <br /><button id="submit">submit</button>
     <br />
@@ -122,6 +144,18 @@
         let getSitUp = document.querySelector("#sit-up");
         let sitUp = getSitUp.value;
         let resultSitUp = 0;
+
+        let getPushUp = document.querySelector("#push-up");
+        let pushUp = getPushUp.value;
+        let resultPushUp = 0;
+
+        let getLunges = document.querySelector("#lunges");
+        let lunges = getLunges.value;
+        let resultLunges = 0;
+
+        let getShuttleRun = document.querySelector("#shuttle-run");
+        let shuttleRun = getShuttleRun.value;
+        let resultShuttleRun = 0;
 
         if (resultKelamin == "pria" && resultUmur == 1) {
           console.log(resultKelamin);
@@ -432,6 +466,330 @@
             resultSitUp = 95;
           } else if (sitUp >= 41) {
             resultSitUp = 100;
+          }
+          //Push up kategkori 1 pria
+          if (pushUp < 16) {
+            resultPushUp = 0;
+          } else if (pushUp == 16) {
+            resultPushUp = 1;
+          } else if (pushUp == 17) {
+            resultPushUp = 4;
+          } else if (pushUp == 18) {
+            resultPushUp = 7;
+          } else if (pushUp == 19) {
+            resultPushUp = 10;
+          } else if (pushUp == 20) {
+            resultPushUp = 13;
+          } else if (pushUp == 21) {
+            resultPushUp = 16;
+          } else if (pushUp == 22) {
+            resultPushUp = 19;
+          } else if (pushUp == 23) {
+            resultPushUp = 22;
+          } else if (pushUp == 24) {
+            resultPushUp = 25;
+          } else if (pushUp == 25) {
+            resultPushUp = 28;
+          } else if (pushUp == 26) {
+            resultPushUp = 31;
+          } else if (pushUp == 27) {
+            resultPushUp = 34;
+          } else if (pushUp == 28) {
+            resultPushUp = 37;
+          } else if (pushUp == 29) {
+            resultPushUp = 40;
+          } else if (pushUp == 30) {
+            resultPushUp = 43;
+          } else if (pushUp == 31) {
+            resultPushUp = 46;
+          } else if (pushUp == 32) {
+            resultPushUp = 49;
+          } else if (pushUp == 33) {
+            resultPushUp = 52;
+          } else if (pushUp == 34) {
+            resultPushUp = 55;
+          } else if (pushUp == 35) {
+            resultPushUp = 60;
+          } else if (pushUp == 36) {
+            resultPushUp = 65;
+          } else if (pushUp == 37) {
+            resultPushUp = 70;
+          } else if (pushUp == 38) {
+            resultPushUp = 75;
+          } else if (pushUp == 39) {
+            resultPushUp = 80;
+          } else if (pushUp == 40) {
+            resultPushUp = 85;
+          } else if (pushUp == 41) {
+            resultPushUp = 90;
+          } else if (pushUp == 42) {
+            resultPushUp = 95;
+          } else if (pushUp >= 43) {
+            resultPushUp = 100;
+          }
+          // Lunges kategori 1 pria
+          if (lunges < 27) {
+            resultLunges = 0;
+          } else if (lunges == 27) {
+            resultLunges = 1;
+          } else if (lunges == 28) {
+            resultLunges = 4;
+          } else if (lunges == 29) {
+            resultLunges = 7;
+          } else if (lunges == 30) {
+            resultLunges = 10;
+          } else if (lunges == 31) {
+            resultLunges = 13;
+          } else if (lunges == 32) {
+            resultLunges = 16;
+          } else if (lunges == 33) {
+            resultLunges = 19;
+          } else if (lunges == 34) {
+            resultLunges = 22;
+          } else if (lunges == 35) {
+            resultLunges = 25;
+          } else if (lunges == 36) {
+            resultLunges = 28;
+          } else if (lunges == 37) {
+            resultLunges = 31;
+          } else if (lunges == 38) {
+            resultLunges = 34;
+          } else if (lunges == 39) {
+            resultLunges = 37;
+          } else if (lunges == 40) {
+            resultLunges = 40;
+          } else if (lunges == 41) {
+            resultLunges = 43;
+          } else if (lunges == 42) {
+            resultLunges = 46;
+          } else if (lunges == 43) {
+            resultLunges = 49;
+          } else if (lunges == 44) {
+            resultLunges = 52;
+          } else if (lunges == 45) {
+            resultLunges = 55;
+          } else if (lunges == 46) {
+            resultLunges = 60;
+          } else if (lunges == 47) {
+            resultLunges = 2842;
+          } else if (lunges == 48) {
+            resultLunges = 70;
+          } else if (lunges == 49) {
+            resultLunges = 75;
+          } else if (lunges == 50) {
+            resultLunges = 80;
+          } else if (lunges == 51) {
+            resultLunges = 85;
+          } else if (lunges == 52) {
+            resultLunges = 90;
+          } else if (lunges == 53) {
+            resultLunges = 95;
+          } else if (lunges >= 54) {
+            resultLunges = 100;
+          }
+          //Shuttle run kategori 1 pria
+          if (shuttleRun <= 4.4) {
+            resultShuttleRun = 100;
+          } else if (shuttleRun <= 4.42) {
+            resultShuttleRun = 99;
+          } else if (shuttleRun <= 4.45) {
+            resultShuttleRun = 98;
+          } else if (shuttleRun <= 4.48) {
+            resultShuttleRun = 97;
+          } else if (shuttleRun <= 4.51) {
+            resultShuttleRun = 96;
+          } else if (shuttleRun <= 4.54) {
+            resultShuttleRun = 95;
+          } else if (shuttleRun <= 4.57) {
+            resultShuttleRun = 94;
+          } else if (shuttleRun <= 4.6) {
+            resultShuttleRun = 93;
+          } else if (shuttleRun <= 4.63) {
+            resultShuttleRun = 92;
+          } else if (shuttleRun <= 4.66) {
+            resultShuttleRun = 91;
+          } else if (shuttleRun <= 4.69) {
+            resultShuttleRun = 90;
+          } else if (shuttleRun <= 4.72) {
+            resultShuttleRun = 89;
+          } else if (shuttleRun <= 4.75) {
+            resultShuttleRun = 88;
+          } else if (shuttleRun <= 4.78) {
+            resultShuttleRun = 87;
+          } else if (shuttleRun <= 4.81) {
+            resultShuttleRun = 86;
+          } else if (shuttleRun <= 4.84) {
+            resultShuttleRun = 85;
+          } else if (shuttleRun <= 4.87) {
+            resultShuttleRun = 84;
+          } else if (shuttleRun <= 4.9) {
+            resultShuttleRun = 83;
+          } else if (shuttleRun <= 4.93) {
+            resultShuttleRun = 82;
+          } else if (shuttleRun <= 4.96) {
+            resultShuttleRun = 81;
+          } else if (shuttleRun <= 4.99) {
+            resultShuttleRun = 80;
+          } else if (shuttleRun <= 5.02) {
+            resultShuttleRun = 79;
+          } else if (shuttleRun <= 5.05) {
+            resultShuttleRun = 78;
+          } else if (shuttleRun <= 5.08) {
+            resultShuttleRun = 77;
+          } else if (shuttleRun <= 5.11) {
+            resultShuttleRun = 76;
+          } else if (shuttleRun <= 5.14) {
+            resultShuttleRun = 75;
+          } else if (shuttleRun <= 5.17) {
+            resultShuttleRun = 74;
+          } else if (shuttleRun <= 5.2) {
+            resultShuttleRun = 73;
+          } else if (shuttleRun <= 5.23) {
+            resultShuttleRun = 72;
+          } else if (shuttleRun <= 5.26) {
+            resultShuttleRun = 71;
+          } else if (shuttleRun <= 5.29) {
+            resultShuttleRun = 70;
+          } else if (shuttleRun <= 5.33) {
+            resultShuttleRun = 69;
+          } else if (shuttleRun <= 5.37) {
+            resultShuttleRun = 68;
+          } else if (shuttleRun <= 5.41) {
+            resultShuttleRun = 67;
+          } else if (shuttleRun <= 5.45) {
+            resultShuttleRun = 66;
+          } else if (shuttleRun <= 5.49) {
+            resultShuttleRun = 65;
+          } else if (shuttleRun <= 5.53) {
+            resultShuttleRun = 64;
+          } else if (shuttleRun <= 5.57) {
+            resultShuttleRun = 63;
+          } else if (shuttleRun <= 5.61) {
+            resultShuttleRun = 62;
+          } else if (shuttleRun <= 5.65) {
+            resultShuttleRun = 61;
+          } else if (shuttleRun <= 5.69) {
+            resultShuttleRun = 60;
+          } else if (shuttleRun <= 5.73) {
+            resultShuttleRun = 59;
+          } else if (shuttleRun <= 5.77) {
+            resultShuttleRun = 58;
+          } else if (shuttleRun <= 5.81) {
+            resultShuttleRun = 57;
+          } else if (shuttleRun <= 5.85) {
+            resultShuttleRun = 56;
+          } else if (shuttleRun <= 5.89) {
+            resultShuttleRun = 55;
+          } else if (shuttleRun <= 5.93) {
+            resultShuttleRun = 54;
+          } else if (shuttleRun <= 5.97) {
+            resultShuttleRun = 53;
+          } else if (shuttleRun <= 6.01) {
+            resultShuttleRun = 52;
+          } else if (shuttleRun <= 6.05) {
+            resultShuttleRun = 51;
+          } else if (shuttleRun <= 6.09) {
+            resultShuttleRun = 50;
+          } else if (shuttleRun <= 6.13) {
+            resultShuttleRun = 49;
+          } else if (shuttleRun <= 6.17) {
+            resultShuttleRun = 48;
+          } else if (shuttleRun <= 6.21) {
+            resultShuttleRun = 47;
+          } else if (shuttleRun <= 6.25) {
+            resultShuttleRun = 46;
+          } else if (shuttleRun <= 6.29) {
+            resultShuttleRun = 45;
+          } else if (shuttleRun <= 6.33) {
+            resultShuttleRun = 44;
+          } else if (shuttleRun <= 6.37) {
+            resultShuttleRun = 43;
+          } else if (shuttleRun <= 6.41) {
+            resultShuttleRun = 42;
+          } else if (shuttleRun <= 6.45) {
+            resultShuttleRun = 41;
+          } else if (shuttleRun <= 6.49) {
+            resultShuttleRun = 40;
+          } else if (shuttleRun <= 6.53) {
+            resultShuttleRun = 39;
+          } else if (shuttleRun <= 6.57) {
+            resultShuttleRun = 38;
+          } else if (shuttleRun <= 6.61) {
+            resultShuttleRun = 37;
+          } else if (shuttleRun <= 6.65) {
+            resultShuttleRun = 36;
+          } else if (shuttleRun <= 6.69) {
+            resultShuttleRun = 35;
+          } else if (shuttleRun <= 6.73) {
+            resultShuttleRun = 34;
+          } else if (shuttleRun <= 6.77) {
+            resultShuttleRun = 33;
+          } else if (shuttleRun <= 6.81) {
+            resultShuttleRun = 32;
+          } else if (shuttleRun <= 6.85) {
+            resultShuttleRun = 31;
+          } else if (shuttleRun <= 6.89) {
+            resultShuttleRun = 30;
+          } else if (shuttleRun <= 6.93) {
+            resultShuttleRun = 29;
+          } else if (shuttleRun <= 6.97) {
+            resultShuttleRun = 28;
+          } else if (shuttleRun <= 7.01) {
+            resultShuttleRun = 27;
+          } else if (shuttleRun <= 7.05) {
+            resultShuttleRun = 26;
+          } else if (shuttleRun <= 7.09) {
+            resultShuttleRun = 25;
+          } else if (shuttleRun <= 7.13) {
+            resultShuttleRun = 24;
+          } else if (shuttleRun <= 7.17) {
+            resultShuttleRun = 23;
+          } else if (shuttleRun <= 7.21) {
+            resultShuttleRun = 22;
+          } else if (shuttleRun <= 7.25) {
+            resultShuttleRun = 21;
+          } else if (shuttleRun <= 7.29) {
+            resultShuttleRun = 20;
+          } else if (shuttleRun <= 7.33) {
+            resultShuttleRun = 19;
+          } else if (shuttleRun <= 7.37) {
+            resultShuttleRun = 18;
+          } else if (shuttleRun <= 7.41) {
+            resultShuttleRun = 17;
+          } else if (shuttleRun <= 7.45) {
+            resultShuttleRun = 16;
+          } else if (shuttleRun <= 7.49) {
+            resultShuttleRun = 15;
+          } else if (shuttleRun <= 7.53) {
+            resultShuttleRun = 14;
+          } else if (shuttleRun <= 7.57) {
+            resultShuttleRun = 13;
+          } else if (shuttleRun <= 7.61) {
+            resultShuttleRun = 12;
+          } else if (shuttleRun <= 7.65) {
+            resultShuttleRun = 11;
+          } else if (shuttleRun <= 7.69) {
+            resultShuttleRun = 10;
+          } else if (shuttleRun <= 7.73) {
+            resultShuttleRun = 9;
+          } else if (shuttleRun <= 7.77) {
+            resultShuttleRun = 8;
+          } else if (shuttleRun <= 7.81) {
+            resultShuttleRun = 7;
+          } else if (shuttleRun <= 7.85) {
+            resultShuttleRun = 6;
+          } else if (shuttleRun <= 7.89) {
+            resultShuttleRun = 5;
+          } else if (shuttleRun <= 7.93) {
+            resultShuttleRun = 4;
+          } else if (shuttleRun <= 7.97) {
+            resultShuttleRun = 3;
+          } else if (shuttleRun <= 8.01) {
+            resultShuttleRun = 2;
+          } else if (shuttleRun <= 8.05) {
+            resultShuttleRun = 1;
+          } else if (shuttleRun > 8.05) {
+            resultShuttleRun = 0;
           }
         } else if (resultKelamin == "pria" && resultUmur == 2) {
           if (lari >= 3412) {
@@ -749,6 +1107,326 @@
           } else if (sitUp >= 40) {
             resultSitUp = 100;
           }
+          //Push up kategkori 2 pria
+          if (pushUp < 15) {
+            resultPushUp = 0;
+          } else if (pushUp == 15) {
+            resultPushUp = 3;
+          } else if (pushUp == 16) {
+            resultPushUp = 6;
+          } else if (pushUp == 17) {
+            resultPushUp = 9;
+          } else if (pushUp == 18) {
+            resultPushUp = 12;
+          } else if (pushUp == 19) {
+            resultPushUp = 15;
+          } else if (pushUp == 20) {
+            resultPushUp = 18;
+          } else if (pushUp == 21) {
+            resultPushUp = 21;
+          } else if (pushUp == 22) {
+            resultPushUp = 24;
+          } else if (pushUp == 23) {
+            resultPushUp = 27;
+          } else if (pushUp == 24) {
+            resultPushUp = 30;
+          } else if (pushUp == 25) {
+            resultPushUp = 33;
+          } else if (pushUp == 26) {
+            resultPushUp = 36;
+          } else if (pushUp == 27) {
+            resultPushUp = 39;
+          } else if (pushUp == 28) {
+            resultPushUp = 42;
+          } else if (pushUp == 29) {
+            resultPushUp = 45;
+          } else if (pushUp == 30) {
+            resultPushUp = 48;
+          } else if (pushUp == 31) {
+            resultPushUp = 51;
+          } else if (pushUp == 32) {
+            resultPushUp = 54;
+          } else if (pushUp == 33) {
+            resultPushUp = 57;
+          } else if (pushUp == 34) {
+            resultPushUp = 60;
+          } else if (pushUp == 35) {
+            resultPushUp = 65;
+          } else if (pushUp == 36) {
+            resultPushUp = 70;
+          } else if (pushUp == 37) {
+            resultPushUp = 75;
+          } else if (pushUp == 38) {
+            resultPushUp = 80;
+          } else if (pushUp == 39) {
+            resultPushUp = 85;
+          } else if (pushUp == 40) {
+            resultPushUp = 90;
+          } else if (pushUp == 41) {
+            resultPushUp = 95;
+          } else if (pushUp >= 42) {
+            resultPushUp = 100;
+          }
+          // Lunges kategori 2 pria
+          if (lunges < 26) {
+            resultLunges = 0;
+          } else if (lunges == 26) {
+            resultLunges = 3;
+          } else if (lunges == 27) {
+            resultLunges = 6;
+          } else if (lunges == 28) {
+            resultLunges = 9;
+          } else if (lunges == 29) {
+            resultLunges = 12;
+          } else if (lunges == 30) {
+            resultLunges = 15;
+          } else if (lunges == 31) {
+            resultLunges = 18;
+          } else if (lunges == 32) {
+            resultLunges = 21;
+          } else if (lunges == 33) {
+            resultLunges = 24;
+          } else if (lunges == 34) {
+            resultLunges = 27;
+          } else if (lunges == 35) {
+            resultLunges = 30;
+          } else if (lunges == 36) {
+            resultLunges = 33;
+          } else if (lunges == 37) {
+            resultLunges = 36;
+          } else if (lunges == 38) {
+            resultLunges = 39;
+          } else if (lunges == 39) {
+            resultLunges = 42;
+          } else if (lunges == 40) {
+            resultLunges = 45;
+          } else if (lunges == 41) {
+            resultLunges = 48;
+          } else if (lunges == 42) {
+            resultLunges = 51;
+          } else if (lunges == 43) {
+            resultLunges = 54;
+          } else if (lunges == 44) {
+            resultLunges = 57;
+          } else if (lunges == 45) {
+            resultLunges = 60;
+          } else if (lunges == 46) {
+            resultLunges = 65;
+          } else if (lunges == 47) {
+            resultLunges = 70;
+          } else if (lunges == 48) {
+            resultLunges = 75;
+          } else if (lunges == 49) {
+            resultLunges = 80;
+          } else if (lunges == 50) {
+            resultLunges = 85;
+          } else if (lunges == 51) {
+            resultLunges = 90;
+          } else if (lunges == 52) {
+            resultLunges = 95;
+          } else if (lunges >= 53) {
+            resultLunges = 100;
+          }
+          //shuttle run kategori 2 pria
+          if (shuttleRun < 5) {
+            resultShuttleRun = 100;
+          } else if (shuttleRun < 5.13) {
+            resultShuttleRun = 97;
+          } else if (shuttleRun < 5.17) {
+            resultShuttleRun = 96;
+          } else if (shuttleRun < 5.21) {
+            resultShuttleRun = 95;
+          } else if (shuttleRun < 5.25) {
+            resultShuttleRun = 94;
+          } else if (shuttleRun < 5.29) {
+            resultShuttleRun = 93;
+          } else if (shuttleRun < 5.33) {
+            resultShuttleRun = 92;
+          } else if (shuttleRun < 5.37) {
+            resultShuttleRun = 91;
+          } else if (shuttleRun < 5.41) {
+            resultShuttleRun = 90;
+          } else if (shuttleRun < 5.45) {
+            resultShuttleRun = 89;
+          } else if (shuttleRun < 5.49) {
+            resultShuttleRun = 88;
+          } else if (shuttleRun < 5.53) {
+            resultShuttleRun = 87;
+          } else if (shuttleRun < 5.57) {
+            resultShuttleRun = 86;
+          } else if (shuttleRun < 5.61) {
+            resultShuttleRun = 85;
+          } else if (shuttleRun < 5.65) {
+            resultShuttleRun = 84;
+          } else if (shuttleRun < 5.69) {
+            resultShuttleRun = 83;
+          } else if (shuttleRun < 5.73) {
+            resultShuttleRun = 82;
+          } else if (shuttleRun < 5.77) {
+            resultShuttleRun = 81;
+          } else if (shuttleRun < 5.81) {
+            resultShuttleRun = 80;
+          } else if (shuttleRun < 5.85) {
+            resultShuttleRun = 79;
+          } else if (shuttleRun < 5.89) {
+            resultShuttleRun = 78;
+          } else if (shuttleRun < 5.93) {
+            resultShuttleRun = 77;
+          } else if (shuttleRun < 5.97) {
+            resultShuttleRun = 76;
+          } else if (shuttleRun < 6.01) {
+            resultShuttleRun = 75;
+          } else if (shuttleRun < 6.05) {
+            resultShuttleRun = 74;
+          } else if (shuttleRun < 6.09) {
+            resultShuttleRun = 73;
+          } else if (shuttleRun < 6.13) {
+            resultShuttleRun = 72;
+          } else if (shuttleRun < 6.17) {
+            resultShuttleRun = 71;
+          } else if (shuttleRun < 6.21) {
+            resultShuttleRun = 70;
+          } else if (shuttleRun < 6.26) {
+            resultShuttleRun = 69;
+          } else if (shuttleRun < 6.31) {
+            resultShuttleRun = 68;
+          } else if (shuttleRun < 6.36) {
+            resultShuttleRun = 67;
+          } else if (shuttleRun < 6.41) {
+            resultShuttleRun = 66;
+          } else if (shuttleRun < 6.46) {
+            resultShuttleRun = 65;
+          } else if (shuttleRun < 6.51) {
+            resultShuttleRun = 64;
+          } else if (shuttleRun < 6.56) {
+            resultShuttleRun = 63;
+          } else if (shuttleRun < 6.61) {
+            resultShuttleRun = 62;
+          } else if (shuttleRun < 6.66) {
+            resultShuttleRun = 61;
+          } else if (shuttleRun < 6.71) {
+            resultShuttleRun = 60;
+          } else if (shuttleRun < 6.76) {
+            resultShuttleRun = 59;
+          } else if (shuttleRun < 6.81) {
+            resultShuttleRun = 58;
+          } else if (shuttleRun < 6.86) {
+            resultShuttleRun = 57;
+          } else if (shuttleRun < 6.91) {
+            resultShuttleRun = 56;
+          } else if (shuttleRun < 6.96) {
+            resultShuttleRun = 55;
+          } else if (shuttleRun < 7.01) {
+            resultShuttleRun = 54;
+          } else if (shuttleRun < 7.06) {
+            resultShuttleRun = 53;
+          } else if (shuttleRun < 7.11) {
+            resultShuttleRun = 52;
+          } else if (shuttleRun < 7.16) {
+            resultShuttleRun = 51;
+          } else if (shuttleRun < 7.21) {
+            resultShuttleRun = 50;
+          } else if (shuttleRun < 7.26) {
+            resultShuttleRun = 49;
+          } else if (shuttleRun < 7.31) {
+            resultShuttleRun = 48;
+          } else if (shuttleRun < 7.36) {
+            resultShuttleRun = 47;
+          } else if (shuttleRun < 7.41) {
+            resultShuttleRun = 46;
+          } else if (shuttleRun < 7.46) {
+            resultShuttleRun = 45;
+          } else if (shuttleRun < 7.51) {
+            resultShuttleRun = 44;
+          } else if (shuttleRun < 7.56) {
+            resultShuttleRun = 43;
+          } else if (shuttleRun < 7.61) {
+            resultShuttleRun = 42;
+          } else if (shuttleRun < 7.66) {
+            resultShuttleRun = 41;
+          } else if (shuttleRun < 7.71) {
+            resultShuttleRun = 40;
+          } else if (shuttleRun < 7.76) {
+            resultShuttleRun = 39;
+          } else if (shuttleRun < 7.81) {
+            resultShuttleRun = 38;
+          } else if (shuttleRun < 7.86) {
+            resultShuttleRun = 37;
+          } else if (shuttleRun < 7.91) {
+            resultShuttleRun = 36;
+          } else if (shuttleRun < 7.96) {
+            resultShuttleRun = 35;
+          } else if (shuttleRun < 7.86) {
+            resultShuttleRun = 34;
+          } else if (shuttleRun < 8.01) {
+            resultShuttleRun = 33;
+          } else if (shuttleRun < 8.06) {
+            resultShuttleRun = 32;
+          } else if (shuttleRun < 8.11) {
+            resultShuttleRun = 31;
+          } else if (shuttleRun < 8.21) {
+            resultShuttleRun = 30;
+          } else if (shuttleRun < 8.26) {
+            resultShuttleRun = 29;
+          } else if (shuttleRun < 8.31) {
+            resultShuttleRun = 28;
+          } else if (shuttleRun < 8.36) {
+            resultShuttleRun = 27;
+          } else if (shuttleRun < 8.41) {
+            resultShuttleRun = 26;
+          } else if (shuttleRun < 8.46) {
+            resultShuttleRun = 25;
+          } else if (shuttleRun < 8.51) {
+            resultShuttleRun = 24;
+          } else if (shuttleRun < 8.56) {
+            resultShuttleRun = 23;
+          } else if (shuttleRun < 8.61) {
+            resultShuttleRun = 22;
+          } else if (shuttleRun < 8.66) {
+            resultShuttleRun = 21;
+          } else if (shuttleRun < 8.71) {
+            resultShuttleRun = 20;
+          } else if (shuttleRun < 8.76) {
+            resultShuttleRun = 19;
+          } else if (shuttleRun < 8.81) {
+            resultShuttleRun = 18;
+          } else if (shuttleRun < 8.86) {
+            resultShuttleRun = 17;
+          } else if (shuttleRun < 8.91) {
+            resultShuttleRun = 16;
+          } else if (shuttleRun < 8.96) {
+            resultShuttleRun = 15;
+          } else if (shuttleRun < 9.01) {
+            resultShuttleRun = 14;
+          } else if (shuttleRun < 9.06) {
+            resultShuttleRun = 13;
+          } else if (shuttleRun < 9.11) {
+            resultShuttleRun = 12;
+          } else if (shuttleRun < 9.16) {
+            resultShuttleRun = 11;
+          } else if (shuttleRun < 9.21) {
+            resultShuttleRun = 10;
+          } else if (shuttleRun < 9.26) {
+            resultShuttleRun = 9;
+          } else if (shuttleRun < 9.31) {
+            resultShuttleRun = 8;
+          } else if (shuttleRun < 9.36) {
+            resultShuttleRun = 7;
+          } else if (shuttleRun < 9.41) {
+            resultShuttleRun = 6;
+          } else if (shuttleRun < 9.46) {
+            resultShuttleRun = 5;
+          } else if (shuttleRun < 9.51) {
+            resultShuttleRun = 4;
+          } else if (shuttleRun < 9.56) {
+            resultShuttleRun = 3;
+          } else if (shuttleRun < 9.61) {
+            resultShuttleRun = 2;
+          } else if (shuttleRun <= 9.65) {
+            resultShuttleRun = 1;
+          } else if (shuttleRun > 9.65) {
+            resultShuttleRun = 0;
+          }
         } else if (resultKelamin == "pria" && resultUmur == 3) {
           if (lari >= 3317) {
             resultLari = 100;
@@ -1053,6 +1731,130 @@
           } else if (sitUp >= 39) {
             resultSitUp = 100;
           }
+          //Push up kategkori 3 pria
+          if (pushUp < 13) {
+            resultPushUp = 0;
+          } else if (pushUp == 13) {
+            resultPushUp = 2;
+          } else if (pushUp == 14) {
+            resultPushUp = 5;
+          } else if (pushUp == 15) {
+            resultPushUp = 8;
+          } else if (pushUp == 16) {
+            resultPushUp = 11;
+          } else if (pushUp == 17) {
+            resultPushUp = 14;
+          } else if (pushUp == 18) {
+            resultPushUp = 17;
+          } else if (pushUp == 19) {
+            resultPushUp = 20;
+          } else if (pushUp == 20) {
+            resultPushUp = 23;
+          } else if (pushUp == 21) {
+            resultPushUp = 26;
+          } else if (pushUp == 22) {
+            resultPushUp = 29;
+          } else if (pushUp == 23) {
+            resultPushUp = 32;
+          } else if (pushUp == 24) {
+            resultPushUp = 35;
+          } else if (pushUp == 25) {
+            resultPushUp = 38;
+          } else if (pushUp == 26) {
+            resultPushUp = 41;
+          } else if (pushUp == 27) {
+            resultPushUp = 44;
+          } else if (pushUp == 28) {
+            resultPushUp = 47;
+          } else if (pushUp == 29) {
+            resultPushUp = 50;
+          } else if (pushUp == 30) {
+            resultPushUp = 53;
+          } else if (pushUp == 31) {
+            resultPushUp = 56;
+          } else if (pushUp == 32) {
+            resultPushUp = 59;
+          } else if (pushUp == 33) {
+            resultPushUp = 62;
+          } else if (pushUp == 34) {
+            resultPushUp = 65;
+          } else if (pushUp == 35) {
+            resultPushUp = 70;
+          } else if (pushUp == 36) {
+            resultPushUp = 75;
+          } else if (pushUp == 37) {
+            resultPushUp = 80;
+          } else if (pushUp == 38) {
+            resultPushUp = 85;
+          } else if (pushUp == 39) {
+            resultPushUp = 90;
+          } else if (pushUp == 40) {
+            resultPushUp = 95;
+          } else if (pushUp >= 41) {
+            resultPushUp = 100;
+          }
+          // Lunges kategori 3 pria
+          if (lunges < 24) {
+            resultLunges = 0;
+          } else if (lunges == 24) {
+            resultLunges = 2;
+          } else if (lunges == 25) {
+            resultLunges = 5;
+          } else if (lunges == 26) {
+            resultLunges = 8;
+          } else if (lunges == 27) {
+            resultLunges = 11;
+          } else if (lunges == 28) {
+            resultLunges = 14;
+          } else if (lunges == 29) {
+            resultLunges = 17;
+          } else if (lunges == 30) {
+            resultLunges = 20;
+          } else if (lunges == 31) {
+            resultLunges = 23;
+          } else if (lunges == 32) {
+            resultLunges = 26;
+          } else if (lunges == 33) {
+            resultLunges = 29;
+          } else if (lunges == 34) {
+            resultLunges = 32;
+          } else if (lunges == 35) {
+            resultLunges = 35;
+          } else if (lunges == 36) {
+            resultLunges = 38;
+          } else if (lunges == 37) {
+            resultLunges = 41;
+          } else if (lunges == 38) {
+            resultLunges = 44;
+          } else if (lunges == 39) {
+            resultLunges = 47;
+          } else if (lunges == 40) {
+            resultLunges = 50;
+          } else if (lunges == 41) {
+            resultLunges = 53;
+          } else if (lunges == 42) {
+            resultLunges = 56;
+          } else if (lunges == 43) {
+            resultLunges = 59;
+          } else if (lunges == 44) {
+            resultLunges = 62;
+          } else if (lunges == 45) {
+            resultLunges = 65;
+          } else if (lunges == 46) {
+            resultLunges = 70;
+          } else if (lunges == 47) {
+            resultLunges = 75;
+          } else if (lunges == 48) {
+            resultLunges = 80;
+          } else if (lunges == 49) {
+            resultLunges = 85;
+          } else if (lunges == 50) {
+            resultLunges = 90;
+          } else if (lunges == 51) {
+            resultLunges = 95;
+          } else if (lunges >= 52) {
+            resultLunges = 100;
+          }
         } else if (resultKelamin == "pria" && resultUmur == 4) {
           if (lari >= 3222) {
             resultLari = 100;
@@ -1356,6 +2158,134 @@
           } else if (sitUp >= 38) {
             resultSitUp = 100;
           }
+          //Push up kategkori 4 pria
+          if (pushUp < 11) {
+            resultPushUp = 0;
+          } else if (pushUp == 11) {
+            resultPushUp = 1;
+          } else if (pushUp == 12) {
+            resultPushUp = 4;
+          } else if (pushUp == 13) {
+            resultPushUp = 7;
+          } else if (pushUp == 14) {
+            resultPushUp = 10;
+          } else if (pushUp == 15) {
+            resultPushUp = 13;
+          } else if (pushUp == 16) {
+            resultPushUp = 16;
+          } else if (pushUp == 17) {
+            resultPushUp = 19;
+          } else if (pushUp == 18) {
+            resultPushUp = 22;
+          } else if (pushUp == 19) {
+            resultPushUp = 25;
+          } else if (pushUp == 20) {
+            resultPushUp = 28;
+          } else if (pushUp == 21) {
+            resultPushUp = 31;
+          } else if (pushUp == 22) {
+            resultPushUp = 34;
+          } else if (pushUp == 23) {
+            resultPushUp = 37;
+          } else if (pushUp == 24) {
+            resultPushUp = 40;
+          } else if (pushUp == 25) {
+            resultPushUp = 43;
+          } else if (pushUp == 26) {
+            resultPushUp = 46;
+          } else if (pushUp == 27) {
+            resultPushUp = 49;
+          } else if (pushUp == 28) {
+            resultPushUp = 52;
+          } else if (pushUp == 29) {
+            resultPushUp = 55;
+          } else if (pushUp == 30) {
+            resultPushUp = 58;
+          } else if (pushUp == 31) {
+            resultPushUp = 61;
+          } else if (pushUp == 32) {
+            resultPushUp = 64;
+          } else if (pushUp == 33) {
+            resultPushUp = 67;
+          } else if (pushUp == 34) {
+            resultPushUp = 70;
+          } else if (pushUp == 35) {
+            resultPushUp = 75;
+          } else if (pushUp == 36) {
+            resultPushUp = 80;
+          } else if (pushUp == 37) {
+            resultPushUp = 85;
+          } else if (pushUp == 38) {
+            resultPushUp = 90;
+          } else if (pushUp == 39) {
+            resultPushUp = 95;
+          } else if (pushUp >= 40) {
+            resultPushUp = 100;
+          }
+          // Lunges kategori 4 pria
+          if (lunges < 22) {
+            resultLunges = 0;
+          } else if (lunges == 22) {
+            resultLunges = 1;
+          } else if (lunges == 23) {
+            resultLunges = 4;
+          } else if (lunges == 24) {
+            resultLunges = 7;
+          } else if (lunges == 25) {
+            resultLunges = 10;
+          } else if (lunges == 26) {
+            resultLunges = 13;
+          } else if (lunges == 27) {
+            resultLunges = 16;
+          } else if (lunges == 28) {
+            resultLunges = 19;
+          } else if (lunges == 29) {
+            resultLunges = 22;
+          } else if (lunges == 30) {
+            resultLunges = 25;
+          } else if (lunges == 31) {
+            resultLunges = 28;
+          } else if (lunges == 32) {
+            resultLunges = 31;
+          } else if (lunges == 33) {
+            resultLunges = 34;
+          } else if (lunges == 34) {
+            resultLunges = 37;
+          } else if (lunges == 35) {
+            resultLunges = 40;
+          } else if (lunges == 36) {
+            resultLunges = 43;
+          } else if (lunges == 37) {
+            resultLunges = 46;
+          } else if (lunges == 38) {
+            resultLunges = 49;
+          } else if (lunges == 39) {
+            resultLunges = 52;
+          } else if (lunges == 40) {
+            resultLunges = 55;
+          } else if (lunges == 41) {
+            resultLunges = 58;
+          } else if (lunges == 42) {
+            resultLunges = 61;
+          } else if (lunges == 43) {
+            resultLunges = 64;
+          } else if (lunges == 44) {
+            resultLunges = 67;
+          } else if (lunges == 45) {
+            resultLunges = 70;
+          } else if (lunges == 46) {
+            resultLunges = 75;
+          } else if (lunges == 47) {
+            resultLunges = 80;
+          } else if (lunges == 48) {
+            resultLunges = 85;
+          } else if (lunges == 49) {
+            resultLunges = 90;
+          } else if (lunges == 50) {
+            resultLunges = 95;
+          } else if (lunges >= 51) {
+            resultLunges = 100;
+          }
         } else if (resultKelamin == "pria" && resultUmur == 5) {
           if (lari >= 3127) {
             resultLari = 100;
@@ -1655,6 +2585,134 @@
             resultSitUp = 95;
           } else if (sitUp >= 37) {
             resultSitUp = 100;
+          }
+          //Push up kategkori 5 pria
+          if (pushUp < 10) {
+            resultPushUp = 0;
+          } else if (pushUp == 10) {
+            resultPushUp = 3;
+          } else if (pushUp == 11) {
+            resultPushUp = 6;
+          } else if (pushUp == 12) {
+            resultPushUp = 9;
+          } else if (pushUp == 13) {
+            resultPushUp = 12;
+          } else if (pushUp == 14) {
+            resultPushUp = 15;
+          } else if (pushUp == 15) {
+            resultPushUp = 18;
+          } else if (pushUp == 16) {
+            resultPushUp = 21;
+          } else if (pushUp == 17) {
+            resultPushUp = 24;
+          } else if (pushUp == 18) {
+            resultPushUp = 27;
+          } else if (pushUp == 19) {
+            resultPushUp = 30;
+          } else if (pushUp == 20) {
+            resultPushUp = 33;
+          } else if (pushUp == 21) {
+            resultPushUp = 36;
+          } else if (pushUp == 22) {
+            resultPushUp = 39;
+          } else if (pushUp == 23) {
+            resultPushUp = 42;
+          } else if (pushUp == 24) {
+            resultPushUp = 45;
+          } else if (pushUp == 25) {
+            resultPushUp = 48;
+          } else if (pushUp == 26) {
+            resultPushUp = 51;
+          } else if (pushUp == 27) {
+            resultPushUp = 54;
+          } else if (pushUp == 28) {
+            resultPushUp = 57;
+          } else if (pushUp == 29) {
+            resultPushUp = 60;
+          } else if (pushUp == 30) {
+            resultPushUp = 63;
+          } else if (pushUp == 31) {
+            resultPushUp = 66;
+          } else if (pushUp == 32) {
+            resultPushUp = 69;
+          } else if (pushUp == 33) {
+            resultPushUp = 72;
+          } else if (pushUp == 34) {
+            resultPushUp = 75;
+          } else if (pushUp == 35) {
+            resultPushUp = 80;
+          } else if (pushUp == 36) {
+            resultPushUp = 85;
+          } else if (pushUp == 37) {
+            resultPushUp = 90;
+          } else if (pushUp == 38) {
+            resultPushUp = 95;
+          } else if (pushUp >= 39) {
+            resultPushUp = 100;
+          }
+          // Lunges kategori 5 pria
+          if (lunges < 21) {
+            resultLunges = 0;
+          } else if (lunges == 21) {
+            resultLunges = 3;
+          } else if (lunges == 22) {
+            resultLunges = 6;
+          } else if (lunges == 23) {
+            resultLunges = 9;
+          } else if (lunges == 24) {
+            resultLunges = 12;
+          } else if (lunges == 25) {
+            resultLunges = 15;
+          } else if (lunges == 26) {
+            resultLunges = 18;
+          } else if (lunges == 27) {
+            resultLunges = 21;
+          } else if (lunges == 28) {
+            resultLunges = 24;
+          } else if (lunges == 29) {
+            resultLunges = 27;
+          } else if (lunges == 30) {
+            resultLunges = 30;
+          } else if (lunges == 31) {
+            resultLunges = 33;
+          } else if (lunges == 32) {
+            resultLunges = 36;
+          } else if (lunges == 33) {
+            resultLunges = 39;
+          } else if (lunges == 34) {
+            resultLunges = 42;
+          } else if (lunges == 35) {
+            resultLunges = 45;
+          } else if (lunges == 36) {
+            resultLunges = 48;
+          } else if (lunges == 37) {
+            resultLunges = 51;
+          } else if (lunges == 38) {
+            resultLunges = 54;
+          } else if (lunges == 39) {
+            resultLunges = 57;
+          } else if (lunges == 40) {
+            resultLunges = 60;
+          } else if (lunges == 41) {
+            resultLunges = 63;
+          } else if (lunges == 42) {
+            resultLunges = 66;
+          } else if (lunges == 43) {
+            resultLunges = 69;
+          } else if (lunges == 44) {
+            resultLunges = 72;
+          } else if (lunges == 45) {
+            resultLunges = 75;
+          } else if (lunges == 46) {
+            resultLunges = 80;
+          } else if (lunges == 47) {
+            resultLunges = 85;
+          } else if (lunges == 48) {
+            resultLunges = 90;
+          } else if (lunges == 49) {
+            resultLunges = 95;
+          } else if (lunges >= 50) {
+            resultLunges = 100;
           }
         } else if (resultKelamin == "pria" && resultUmur == 6) {
           if (lari >= 3032) {
@@ -1956,6 +3014,138 @@
           } else if (sitUp >= 36) {
             resultSitUp = 100;
           }
+          //Push up kategori 6 pria
+          if (pushUp < 8) {
+            resultPushUp = 0;
+          } else if (pushUp == 8) {
+            resultPushUp = 2;
+          } else if (pushUp == 9) {
+            resultPushUp = 5;
+          } else if (pushUp == 10) {
+            resultPushUp = 8;
+          } else if (pushUp == 11) {
+            resultPushUp = 11;
+          } else if (pushUp == 12) {
+            resultPushUp = 14;
+          } else if (pushUp == 13) {
+            resultPushUp = 17;
+          } else if (pushUp == 14) {
+            resultPushUp = 20;
+          } else if (pushUp == 15) {
+            resultPushUp = 23;
+          } else if (pushUp == 16) {
+            resultPushUp = 26;
+          } else if (pushUp == 17) {
+            resultPushUp = 29;
+          } else if (pushUp == 18) {
+            resultPushUp = 32;
+          } else if (pushUp == 19) {
+            resultPushUp = 35;
+          } else if (pushUp == 20) {
+            resultPushUp = 38;
+          } else if (pushUp == 21) {
+            resultPushUp = 41;
+          } else if (pushUp == 22) {
+            resultPushUp = 44;
+          } else if (pushUp == 23) {
+            resultPushUp = 47;
+          } else if (pushUp == 24) {
+            resultPushUp = 50;
+          } else if (pushUp == 25) {
+            resultPushUp = 53;
+          } else if (pushUp == 26) {
+            resultPushUp = 56;
+          } else if (pushUp == 27) {
+            resultPushUp = 59;
+          } else if (pushUp == 28) {
+            resultPushUp = 62;
+          } else if (pushUp == 29) {
+            resultPushUp = 65;
+          } else if (pushUp == 30) {
+            resultPushUp = 68;
+          } else if (pushUp == 31) {
+            resultPushUp = 71;
+          } else if (pushUp == 32) {
+            resultPushUp = 74;
+          } else if (pushUp == 33) {
+            resultPushUp = 77;
+          } else if (pushUp == 34) {
+            resultPushUp = 80;
+          } else if (pushUp == 35) {
+            resultPushUp = 85;
+          } else if (pushUp == 36) {
+            resultPushUp = 90;
+          } else if (pushUp == 37) {
+            resultPushUp = 95;
+          } else if (pushUp >= 38) {
+            resultPushUp = 100;
+          }
+          // Lunges kategori 6 pria
+          if (lunges < 19) {
+            resultLunges = 0;
+          } else if (lunges == 19) {
+            resultLunges = 2;
+          } else if (lunges == 20) {
+            resultLunges = 5;
+          } else if (lunges == 21) {
+            resultLunges = 8;
+          } else if (lunges == 22) {
+            resultLunges = 11;
+          } else if (lunges == 23) {
+            resultLunges = 14;
+          } else if (lunges == 24) {
+            resultLunges = 17;
+          } else if (lunges == 25) {
+            resultLunges = 20;
+          } else if (lunges == 26) {
+            resultLunges = 23;
+          } else if (lunges == 27) {
+            resultLunges = 26;
+          } else if (lunges == 28) {
+            resultLunges = 29;
+          } else if (lunges == 29) {
+            resultLunges = 32;
+          } else if (lunges == 30) {
+            resultLunges = 35;
+          } else if (lunges == 31) {
+            resultLunges = 38;
+          } else if (lunges == 32) {
+            resultLunges = 41;
+          } else if (lunges == 33) {
+            resultLunges = 44;
+          } else if (lunges == 34) {
+            resultLunges = 47;
+          } else if (lunges == 35) {
+            resultLunges = 50;
+          } else if (lunges == 36) {
+            resultLunges = 53;
+          } else if (lunges == 37) {
+            resultLunges = 56;
+          } else if (lunges == 38) {
+            resultLunges = 59;
+          } else if (lunges == 39) {
+            resultLunges = 62;
+          } else if (lunges == 40) {
+            resultLunges = 65;
+          } else if (lunges == 41) {
+            resultLunges = 68;
+          } else if (lunges == 42) {
+            resultLunges = 71;
+          } else if (lunges == 43) {
+            resultLunges = 74;
+          } else if (lunges == 44) {
+            resultLunges = 77;
+          } else if (lunges == 45) {
+            resultLunges = 80;
+          } else if (lunges == 46) {
+            resultLunges = 85;
+          } else if (lunges == 47) {
+            resultLunges = 90;
+          } else if (lunges == 48) {
+            resultLunges = 95;
+          } else if (lunges >= 49) {
+            resultLunges = 100;
+          }
         } else if (resultKelamin == "pria" && resultUmur == 7) {
           if (lari >= 2937) {
             resultLari = 100;
@@ -2256,6 +3446,142 @@
           } else if (sitUp >= 35) {
             resultSitUp = 100;
           }
+          //Push up kategori 7 pria
+          if (pushUp < 6) {
+            resultPushUp = 0;
+          } else if (pushUp == 6) {
+            resultPushUp = 1;
+          } else if (pushUp == 7) {
+            resultPushUp = 4;
+          } else if (pushUp == 8) {
+            resultPushUp = 7;
+          } else if (pushUp == 9) {
+            resultPushUp = 10;
+          } else if (pushUp == 10) {
+            resultPushUp = 13;
+          } else if (pushUp == 11) {
+            resultPushUp = 16;
+          } else if (pushUp == 12) {
+            resultPushUp = 19;
+          } else if (pushUp == 13) {
+            resultPushUp = 22;
+          } else if (pushUp == 14) {
+            resultPushUp = 25;
+          } else if (pushUp == 15) {
+            resultPushUp = 28;
+          } else if (pushUp == 16) {
+            resultPushUp = 31;
+          } else if (pushUp == 17) {
+            resultPushUp = 34;
+          } else if (pushUp == 18) {
+            resultPushUp = 37;
+          } else if (pushUp == 19) {
+            resultPushUp = 40;
+          } else if (pushUp == 20) {
+            resultPushUp = 43;
+          } else if (pushUp == 21) {
+            resultPushUp = 46;
+          } else if (pushUp == 22) {
+            resultPushUp = 49;
+          } else if (pushUp == 23) {
+            resultPushUp = 52;
+          } else if (pushUp == 24) {
+            resultPushUp = 55;
+          } else if (pushUp == 25) {
+            resultPushUp = 58;
+          } else if (pushUp == 26) {
+            resultPushUp = 61;
+          } else if (pushUp == 27) {
+            resultPushUp = 64;
+          } else if (pushUp == 28) {
+            resultPushUp = 67;
+          } else if (pushUp == 29) {
+            resultPushUp = 70;
+          } else if (pushUp == 30) {
+            resultPushUp = 73;
+          } else if (pushUp == 31) {
+            resultPushUp = 76;
+          } else if (pushUp == 32) {
+            resultPushUp = 79;
+          } else if (pushUp == 33) {
+            resultPushUp = 82;
+          } else if (pushUp == 34) {
+            resultPushUp = 85;
+          } else if (pushUp == 35) {
+            resultPushUp = 90;
+          } else if (pushUp == 36) {
+            resultPushUp = 95;
+          } else if (pushUp >= 37) {
+            resultPushUp = 100;
+          }
+          // Lunges kategori 7 pria
+          if (lunges < 17) {
+            resultLunges = 0;
+          } else if (lunges == 17) {
+            resultLunges = 1;
+          } else if (lunges == 18) {
+            resultLunges = 4;
+          } else if (lunges == 19) {
+            resultLunges = 7;
+          } else if (lunges == 20) {
+            resultLunges = 10;
+          } else if (lunges == 21) {
+            resultLunges = 13;
+          } else if (lunges == 22) {
+            resultLunges = 16;
+          } else if (lunges == 23) {
+            resultLunges = 19;
+          } else if (lunges == 24) {
+            resultLunges = 22;
+          } else if (lunges == 25) {
+            resultLunges = 25;
+          } else if (lunges == 26) {
+            resultLunges = 28;
+          } else if (lunges == 27) {
+            resultLunges = 31;
+          } else if (lunges == 28) {
+            resultLunges = 34;
+          } else if (lunges == 29) {
+            resultLunges = 37;
+          } else if (lunges == 30) {
+            resultLunges = 40;
+          } else if (lunges == 31) {
+            resultLunges = 43;
+          } else if (lunges == 32) {
+            resultLunges = 46;
+          } else if (lunges == 33) {
+            resultLunges = 49;
+          } else if (lunges == 34) {
+            resultLunges = 52;
+          } else if (lunges == 35) {
+            resultLunges = 55;
+          } else if (lunges == 36) {
+            resultLunges = 58;
+          } else if (lunges == 37) {
+            resultLunges = 61;
+          } else if (lunges == 38) {
+            resultLunges = 64;
+          } else if (lunges == 39) {
+            resultLunges = 67;
+          } else if (lunges == 40) {
+            resultLunges = 70;
+          } else if (lunges == 41) {
+            resultLunges = 73;
+          } else if (lunges == 42) {
+            resultLunges = 76;
+          } else if (lunges == 43) {
+            resultLunges = 79;
+          } else if (lunges == 44) {
+            resultLunges = 82;
+          } else if (lunges == 45) {
+            resultLunges = 85;
+          } else if (lunges == 46) {
+            resultLunges = 90;
+          } else if (lunges == 47) {
+            resultLunges = 95;
+          } else if (lunges >= 48) {
+            resultLunges = 100;
+          }
         } else if (resultKelamin == "pria" && resultUmur == 8) {
           if (lari >= 2842) {
             resultLari = 100;
@@ -2553,6 +3879,142 @@
             resultSitUp = 95;
           } else if (sitUp >= 34) {
             resultSitUp = 100;
+          }
+          //Push up kategori 8 pria
+          if (pushUp < 5) {
+            resultPushUp = 0;
+          } else if (pushUp == 5) {
+            resultPushUp = 3;
+          } else if (pushUp == 6) {
+            resultPushUp = 6;
+          } else if (pushUp == 7) {
+            resultPushUp = 9;
+          } else if (pushUp == 8) {
+            resultPushUp = 12;
+          } else if (pushUp == 9) {
+            resultPushUp = 15;
+          } else if (pushUp == 10) {
+            resultPushUp = 18;
+          } else if (pushUp == 11) {
+            resultPushUp = 21;
+          } else if (pushUp == 12) {
+            resultPushUp = 24;
+          } else if (pushUp == 13) {
+            resultPushUp = 27;
+          } else if (pushUp == 14) {
+            resultPushUp = 30;
+          } else if (pushUp == 15) {
+            resultPushUp = 33;
+          } else if (pushUp == 16) {
+            resultPushUp = 36;
+          } else if (pushUp == 17) {
+            resultPushUp = 39;
+          } else if (pushUp == 18) {
+            resultPushUp = 42;
+          } else if (pushUp == 19) {
+            resultPushUp = 45;
+          } else if (pushUp == 20) {
+            resultPushUp = 48;
+          } else if (pushUp == 21) {
+            resultPushUp = 51;
+          } else if (pushUp == 22) {
+            resultPushUp = 54;
+          } else if (pushUp == 23) {
+            resultPushUp = 57;
+          } else if (pushUp == 24) {
+            resultPushUp = 60;
+          } else if (pushUp == 25) {
+            resultPushUp = 63;
+          } else if (pushUp == 26) {
+            resultPushUp = 66;
+          } else if (pushUp == 27) {
+            resultPushUp = 69;
+          } else if (pushUp == 28) {
+            resultPushUp = 72;
+          } else if (pushUp == 29) {
+            resultPushUp = 75;
+          } else if (pushUp == 30) {
+            resultPushUp = 78;
+          } else if (pushUp == 31) {
+            resultPushUp = 81;
+          } else if (pushUp == 32) {
+            resultPushUp = 84;
+          } else if (pushUp == 33) {
+            resultPushUp = 87;
+          } else if (pushUp == 34) {
+            resultPushUp = 90;
+          } else if (pushUp == 35) {
+            resultPushUp = 95;
+          } else if (pushUp >= 36) {
+            resultPushUp = 100;
+          }
+          // Lunges kategori 8 pria
+          if (lunges < 16) {
+            resultLunges = 0;
+          } else if (lunges == 16) {
+            resultLunges = 3;
+          } else if (lunges == 17) {
+            resultLunges = 6;
+          } else if (lunges == 18) {
+            resultLunges = 9;
+          } else if (lunges == 19) {
+            resultLunges = 12;
+          } else if (lunges == 20) {
+            resultLunges = 15;
+          } else if (lunges == 21) {
+            resultLunges = 18;
+          } else if (lunges == 22) {
+            resultLunges = 21;
+          } else if (lunges == 23) {
+            resultLunges = 24;
+          } else if (lunges == 24) {
+            resultLunges = 27;
+          } else if (lunges == 25) {
+            resultLunges = 30;
+          } else if (lunges == 26) {
+            resultLunges = 33;
+          } else if (lunges == 27) {
+            resultLunges = 36;
+          } else if (lunges == 28) {
+            resultLunges = 39;
+          } else if (lunges == 29) {
+            resultLunges = 42;
+          } else if (lunges == 30) {
+            resultLunges = 45;
+          } else if (lunges == 31) {
+            resultLunges = 48;
+          } else if (lunges == 32) {
+            resultLunges = 51;
+          } else if (lunges == 33) {
+            resultLunges = 54;
+          } else if (lunges == 34) {
+            resultLunges = 57;
+          } else if (lunges == 35) {
+            resultLunges = 60;
+          } else if (lunges == 36) {
+            resultLunges = 63;
+          } else if (lunges == 37) {
+            resultLunges = 66;
+          } else if (lunges == 38) {
+            resultLunges = 69;
+          } else if (lunges == 39) {
+            resultLunges = 72;
+          } else if (lunges == 40) {
+            resultLunges = 75;
+          } else if (lunges == 41) {
+            resultLunges = 78;
+          } else if (lunges == 42) {
+            resultLunges = 81;
+          } else if (lunges == 43) {
+            resultLunges = 84;
+          } else if (lunges == 44) {
+            resultLunges = 87;
+          } else if (lunges == 45) {
+            resultLunges = 90;
+          } else if (lunges == 46) {
+            resultLunges = 95;
+          } else if (lunges >= 47) {
+            resultLunges = 100;
           }
         } else if (resultKelamin == "pria" && resultUmur == 9) {
           if (lari >= 2747) {
@@ -2852,6 +4314,146 @@
           } else if (sitUp >= 33) {
             resultSitUp = 100;
           }
+          //Push up kategori 9 pria
+          if (pushUp < 3) {
+            resultPushUp = 0;
+          } else if (pushUp == 3) {
+            resultPushUp = 2;
+          } else if (pushUp == 4) {
+            resultPushUp = 5;
+          } else if (pushUp == 5) {
+            resultPushUp = 8;
+          } else if (pushUp == 6) {
+            resultPushUp = 11;
+          } else if (pushUp == 7) {
+            resultPushUp = 14;
+          } else if (pushUp == 8) {
+            resultPushUp = 17;
+          } else if (pushUp == 9) {
+            resultPushUp = 20;
+          } else if (pushUp == 10) {
+            resultPushUp = 23;
+          } else if (pushUp == 11) {
+            resultPushUp = 26;
+          } else if (pushUp == 12) {
+            resultPushUp = 29;
+          } else if (pushUp == 13) {
+            resultPushUp = 32;
+          } else if (pushUp == 14) {
+            resultPushUp = 35;
+          } else if (pushUp == 15) {
+            resultPushUp = 38;
+          } else if (pushUp == 16) {
+            resultPushUp = 41;
+          } else if (pushUp == 17) {
+            resultPushUp = 44;
+          } else if (pushUp == 18) {
+            resultPushUp = 47;
+          } else if (pushUp == 19) {
+            resultPushUp = 50;
+          } else if (pushUp == 20) {
+            resultPushUp = 53;
+          } else if (pushUp == 21) {
+            resultPushUp = 56;
+          } else if (pushUp == 22) {
+            resultPushUp = 59;
+          } else if (pushUp == 23) {
+            resultPushUp = 62;
+          } else if (pushUp == 24) {
+            resultPushUp = 65;
+          } else if (pushUp == 25) {
+            resultPushUp = 68;
+          } else if (pushUp == 26) {
+            resultPushUp = 71;
+          } else if (pushUp == 27) {
+            resultPushUp = 74;
+          } else if (pushUp == 28) {
+            resultPushUp = 77;
+          } else if (pushUp == 29) {
+            resultPushUp = 80;
+          } else if (pushUp == 30) {
+            resultPushUp = 83;
+          } else if (pushUp == 31) {
+            resultPushUp = 86;
+          } else if (pushUp == 32) {
+            resultPushUp = 89;
+          } else if (pushUp == 33) {
+            resultPushUp = 92;
+          } else if (pushUp == 34) {
+            resultPushUp = 95;
+          } else if (pushUp >= 35) {
+            resultPushUp = 100;
+          }
+          // Lunges kategori 9 pria
+          if (lunges < 14) {
+            resultLunges = 0;
+          } else if (lunges == 14) {
+            resultLunges = 2;
+          } else if (lunges == 15) {
+            resultLunges = 5;
+          } else if (lunges == 16) {
+            resultLunges = 8;
+          } else if (lunges == 17) {
+            resultLunges = 11;
+          } else if (lunges == 18) {
+            resultLunges = 14;
+          } else if (lunges == 19) {
+            resultLunges = 17;
+          } else if (lunges == 20) {
+            resultLunges = 20;
+          } else if (lunges == 21) {
+            resultLunges = 23;
+          } else if (lunges == 22) {
+            resultLunges = 26;
+          } else if (lunges == 23) {
+            resultLunges = 29;
+          } else if (lunges == 24) {
+            resultLunges = 32;
+          } else if (lunges == 25) {
+            resultLunges = 35;
+          } else if (lunges == 26) {
+            resultLunges = 38;
+          } else if (lunges == 27) {
+            resultLunges = 41;
+          } else if (lunges == 28) {
+            resultLunges = 44;
+          } else if (lunges == 29) {
+            resultLunges = 47;
+          } else if (lunges == 30) {
+            resultLunges = 50;
+          } else if (lunges == 31) {
+            resultLunges = 53;
+          } else if (lunges == 32) {
+            resultLunges = 56;
+          } else if (lunges == 33) {
+            resultLunges = 59;
+          } else if (lunges == 34) {
+            resultLunges = 62;
+          } else if (lunges == 35) {
+            resultLunges = 65;
+          } else if (lunges == 36) {
+            resultLunges = 68;
+          } else if (lunges == 37) {
+            resultLunges = 71;
+          } else if (lunges == 38) {
+            resultLunges = 74;
+          } else if (lunges == 39) {
+            resultLunges = 77;
+          } else if (lunges == 40) {
+            resultLunges = 80;
+          } else if (lunges == 41) {
+            resultLunges = 83;
+          } else if (lunges == 42) {
+            resultLunges = 86;
+          } else if (lunges == 43) {
+            resultLunges = 89;
+          } else if (lunges == 44) {
+            resultLunges = 92;
+          } else if (lunges == 45) {
+            resultLunges = 95;
+          } else if (lunges >= 46) {
+            resultLunges = 100;
+          }
         } else if (resultKelamin == "pria" && resultUmur == 10) {
           if (lari >= 2652) {
             resultLari = 100;
@@ -3146,6 +4748,150 @@
           } else if (sitUp >= 32) {
             resultSitUp = 100;
           }
+          //Push up kategori 10 pria
+          if (pushUp < 1) {
+            resultPushUp = 0;
+          } else if (pushUp == 1) {
+            resultPushUp = 1;
+          } else if (pushUp == 2) {
+            resultPushUp = 4;
+          } else if (pushUp == 3) {
+            resultPushUp = 7;
+          } else if (pushUp == 4) {
+            resultPushUp = 10;
+          } else if (pushUp == 5) {
+            resultPushUp = 13;
+          } else if (pushUp == 6) {
+            resultPushUp = 16;
+          } else if (pushUp == 7) {
+            resultPushUp = 19;
+          } else if (pushUp == 8) {
+            resultPushUp = 22;
+          } else if (pushUp == 9) {
+            resultPushUp = 25;
+          } else if (pushUp == 10) {
+            resultPushUp = 28;
+          } else if (pushUp == 11) {
+            resultPushUp = 31;
+          } else if (pushUp == 12) {
+            resultPushUp = 34;
+          } else if (pushUp == 13) {
+            resultPushUp = 37;
+          } else if (pushUp == 14) {
+            resultPushUp = 40;
+          } else if (pushUp == 15) {
+            resultPushUp = 43;
+          } else if (pushUp == 16) {
+            resultPushUp = 46;
+          } else if (pushUp == 17) {
+            resultPushUp = 49;
+          } else if (pushUp == 18) {
+            resultPushUp = 52;
+          } else if (pushUp == 19) {
+            resultPushUp = 55;
+          } else if (pushUp == 20) {
+            resultPushUp = 58;
+          } else if (pushUp == 21) {
+            resultPushUp = 61;
+          } else if (pushUp == 22) {
+            resultPushUp = 64;
+          } else if (pushUp == 23) {
+            resultPushUp = 67;
+          } else if (pushUp == 24) {
+            resultPushUp = 70;
+          } else if (pushUp == 25) {
+            resultPushUp = 73;
+          } else if (pushUp == 26) {
+            resultPushUp = 76;
+          } else if (pushUp == 27) {
+            resultPushUp = 79;
+          } else if (pushUp == 28) {
+            resultPushUp = 82;
+          } else if (pushUp == 29) {
+            resultPushUp = 85;
+          } else if (pushUp == 30) {
+            resultPushUp = 88;
+          } else if (pushUp == 31) {
+            resultPushUp = 91;
+          } else if (pushUp == 32) {
+            resultPushUp = 94;
+          } else if (pushUp == 33) {
+            resultPushUp = 97;
+          } else if (pushUp >= 34) {
+            resultPushUp = 100;
+          }
+          // Lunges kategori 10 pria
+          if (lunges < 12) {
+            resultLunges = 0;
+          } else if (lunges == 12) {
+            resultLunges = 1;
+          } else if (lunges == 13) {
+            resultLunges = 4;
+          } else if (lunges == 14) {
+            resultLunges = 7;
+          } else if (lunges == 15) {
+            resultLunges = 10;
+          } else if (lunges == 16) {
+            resultLunges = 13;
+          } else if (lunges == 17) {
+            resultLunges = 16;
+          } else if (lunges == 18) {
+            resultLunges = 19;
+          } else if (lunges == 19) {
+            resultLunges = 22;
+          } else if (lunges == 20) {
+            resultLunges = 25;
+          } else if (lunges == 21) {
+            resultLunges = 28;
+          } else if (lunges == 22) {
+            resultLunges = 31;
+          } else if (lunges == 23) {
+            resultLunges = 34;
+          } else if (lunges == 24) {
+            resultLunges = 37;
+          } else if (lunges == 25) {
+            resultLunges = 40;
+          } else if (lunges == 26) {
+            resultLunges = 43;
+          } else if (lunges == 27) {
+            resultLunges = 46;
+          } else if (lunges == 28) {
+            resultLunges = 49;
+          } else if (lunges == 29) {
+            resultLunges = 52;
+          } else if (lunges == 30) {
+            resultLunges = 55;
+          } else if (lunges == 31) {
+            resultLunges = 58;
+          } else if (lunges == 32) {
+            resultLunges = 61;
+          } else if (lunges == 33) {
+            resultLunges = 64;
+          } else if (lunges == 34) {
+            resultLunges = 67;
+          } else if (lunges == 35) {
+            resultLunges = 70;
+          } else if (lunges == 36) {
+            resultLunges = 73;
+          } else if (lunges == 37) {
+            resultLunges = 76;
+          } else if (lunges == 38) {
+            resultLunges = 79;
+          } else if (lunges == 39) {
+            resultLunges = 82;
+          } else if (lunges == 40) {
+            resultLunges = 85;
+          } else if (lunges == 41) {
+            resultLunges = 88;
+          } else if (lunges == 42) {
+            resultLunges = 91;
+          } else if (lunges == 43) {
+            resultLunges = 94;
+          } else if (lunges == 44) {
+            resultLunges = 97;
+          } else if (lunges >= 45) {
+            resultLunges = 100;
+          }
         }
         //lari wanita
         else if (resultKelamin == "wanita" && resultUmur == 1) {
@@ -3156,12 +4902,17 @@
         // CREATE InnerHTML untuk hasil
         // let hasil = document.querySelector(".hasil");
         // hasil.innerHTML = `kategori = ${resultUmur}`;
+        let scoreUmur = document.querySelector(".score-umur");
+        scoreUmur.innerHTML = `kategori = ${resultUmur}`;
         let hasil = document.querySelector(".hasil");
         hasil.innerHTML = `\nkelamin = ${resultKelamin},
         kategori = ${resultUmur},
         nilai lari = ${resultLari},
         nilai pull-up = ${resultPullUp}
         nilai sit-up = ${resultSitUp}
+        nilai push-up = ${resultPushUp}
+        nilai lunges = ${resultLunges}
+        nilai shuttle-run =  ${resultShuttleRun}
         `;
       });
     </script>
